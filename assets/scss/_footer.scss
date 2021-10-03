@@ -1,0 +1,103 @@
+#footer {
+  background-color: #1f2120;
+  color: white;
+  .third_widget_area {
+    @extend .col-12, .col-md-2;
+    &:nth-child(4),
+    &:nth-child(5) {
+      @extend .col-12, .col-md-3;
+    }
+  }
+  .footer_widget_area {
+    @extend .d-flex, .flex-row, .flex-wrap;
+    & > p,
+    & > nav {
+      @extend .col-12, .col-md-6;
+    }
+    & > nav {
+      @extend .d-flex, .justify-content-end;
+      @include media-breakpoint-down(md) {
+        & > .menu {
+          margin-right: auto;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  > .container:first-child {
+    padding: 60px 0;
+  }
+  a {
+    color: white;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .widget-title,
+  h3 {
+    font-family: "roboto";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #afafaf;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  li {
+    font-family: "roboto";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  .third_widget_area:last-child li + li {
+    padding-top: 20px;
+  }
+  .wpml-ls-item {
+    display: none;
+  }
+
+  .container-fluid {
+    padding: 20px 0;
+    position: relative;
+    overflow: hidden;
+    &:before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      background-color: #464646;
+      top: 0;
+      width: 100vw;
+    }
+  }
+
+  .footer_widget_area {
+    align-items: center;
+    p,
+    li {
+      font-family: "roboto";
+      font-size: 12px;
+      line-height: 1.5;
+      margin: 0;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .third_widget_area + .third_widget_area {
+      padding-top: 20px;
+    }
+    .third_widget_area:nth-child(2) ul,
+    .third_widget_area:nth-child(3) ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      li + li {
+        padding-left: 10px;
+        margin-left: 10px;
+        border-left: 1px solid white;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.section {
+  position: relative;
+  z-index: 100;
+  background-color: white;
+  padding: 80px 0;
+
+  &-animation {
+    height: 600vh;
+    z-index: -1;
+  }
+
+  &-jumbotron {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f2120;
+    height: 100vh;
+  }
+
+  &-ring {
+    background-color: #1f2120;
+  }
+}

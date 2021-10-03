@@ -1,0 +1,43 @@
+.ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+
+.progress-ring__circle {
+  transition: 0.35s stroke-dashoffset;
+  // axis compensation
+  transform: rotate(-90deg);
+  animation-direction: reverse;
+  transform-origin: 50% 50%;
+
+  background-color: white;
+}
+
+.ring-text {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+
+  padding-top: 40px;
+}
+
+.ring-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .value {
+    position: absolute;
+    color: white;
+    font-size: 48px;
+    font-family: "presicav";
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0px;
+    line-height: 50px;
+  }
+}

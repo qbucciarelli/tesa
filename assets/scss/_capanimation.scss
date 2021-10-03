@@ -1,0 +1,90 @@
+.cap-animation,
+.caps {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  * {
+    transition: 0.2s all;
+  }
+}
+
+.cap-animation {
+  justify-content: flex-start;
+  padding: 80px 0;
+}
+
+.caps {
+  z-index: -1;
+}
+
+.cap {
+  width: 100px;
+  height: 20px;
+  position: absolute;
+}
+
+.cap-1 {
+  z-index: 10;
+  background-color: red;
+  transform: translateY(-100px);
+  height: 200px;
+}
+
+.cap-2 {
+  z-index: 20;
+  background-color: green;
+  transform: translateY(100px);
+}
+.cap-3 {
+  z-index: 30;
+  background-color: blue;
+  transform: translateY(120px);
+  opacity: 0;
+}
+
+/*Text*/
+
+.cap-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+}
+
+.cap-titles {
+  position: relative;
+}
+
+.cap-text-title,
+.cap-text-main-title {
+  text-align: center;
+}
+
+.cap-text-main-title {
+  position: relative;
+}
+
+.cap-text-title {
+  position: absolute;
+  top: 100%;
+  padding-top: 80px;
+}
+
+.cap-text-title--2 {
+  opacity: 0;
+}
+
+.cap-text-block {
+  opacity: 0;
+}

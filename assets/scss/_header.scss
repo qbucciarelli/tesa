@@ -1,0 +1,76 @@
+header {
+  position: relative;
+  z-index: 1000;
+  background-color: #1f2120;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  font-size: 14px;
+  line-height: 21px;
+  padding-left: 20px;
+  padding-right: 20px;
+  &:hover {
+    color: white;
+    opacity: 0.8;
+  }
+}
+.navbar-dark .navbar-toggler {
+  border: none;
+  color: transparent;
+}
+
+@include media-breakpoint-down(md) {
+  .navbar-nav {
+    height: 100vh;
+  }
+
+  .navbar-dark .navbar-nav .nav-link,
+  .dropdown-item {
+    font-family: "roboto";
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.61;
+    color: #fff;
+    padding: 10px 0;
+    margin: 10px 0;
+  }
+  .menu-item + .menu-item {
+    border-top: 1px solid #464646;
+  }
+
+  #menu-main-menu {
+    margin-top: 20px;
+  }
+
+  .wpml-ls-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .nav-link {
+      display: none;
+    }
+    .dropdown-toggle:after {
+      content: none;
+    }
+    .dropdown-menu {
+      display: flex;
+      background-clip: padding-box;
+      background-color: transparent;
+      border: none;
+      border-radius: 0;
+      color: white;
+      min-width: 10rem;
+      padding: 0 0;
+      position: relative;
+      text-align: left;
+    }
+    .dropdown-item {
+      background-color: transparent;
+      &:hover {
+        color: white;
+        opacity: 0.8;
+      }
+    }
+  }
+}

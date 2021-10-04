@@ -1,6 +1,8 @@
 #footer {
   background-color: #1f2120;
   color: white;
+  position: relative;
+  z-index: 1;
   .third_widget_area {
     @extend .col-12, .col-md-2;
     &:nth-child(4),
@@ -40,6 +42,7 @@
     font-weight: 500;
     line-height: 1.5;
     color: #afafaf;
+    margin-bottom: 20px;
   }
   ul {
     padding: 0;

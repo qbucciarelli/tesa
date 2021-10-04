@@ -25,6 +25,16 @@ import * as bootstrap from "bootstrap";
   //   });
   // });
 
+  document.querySelectorAll("a.smooth-link").forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
+
   var heightAnimationContainer = document.querySelectorAll(
     "div.section-animation"
   )[0].clientHeight;
@@ -57,70 +67,191 @@ import * as bootstrap from "bootstrap";
   // When the user scrolls the page, execute myFunction
   window.onscroll = function () {
     console.log(distanceToTopRing, window.pageYOffset);
+    if (distanceToTopAnimation > window.pageYOffset) {
+      document.querySelectorAll("div.cap-text-block--1")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-text-block--1")[0].style.transform =
+        "translateX(-50px)";
+
+      document.querySelectorAll("div.cap-icon-1")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-icon-1")[0].style.transform =
+        "translateX(-50px)";
+      document.querySelectorAll("div.cap-icon-2")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-icon-2")[0].style.transform =
+        "translateX(50px)";
+    }
     if (
       distanceToTopAnimation <= window.pageYOffset &&
       step1 > window.pageYOffset
     ) {
       console.log("Step 1");
       document.querySelectorAll("div.cap-2")[0].style.transform =
-        "translate(0px, 100px)";
-      document.querySelectorAll("div.cap-text-block--1")[0].style.opacity = "0";
-      document.querySelectorAll("div.cap-text-block--1")[1].style.opacity = "0";
+        "translate(0px, 200px)";
+      document.querySelectorAll("div.cap-text-block--1")[0].style.opacity = "1";
+      document.querySelectorAll("div.cap-text-block--1")[0].style.transform =
+        "translateX(0)";
+      document.querySelectorAll("div.cap-text-block--2")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-text-block--2")[0].style.transform =
+        "translateX(-50px)";
+
+      document.querySelectorAll("div.cap-icon-1")[0].style.opacity = "1";
+      document.querySelectorAll("div.cap-icon-1")[0].style.transform =
+        "translateX(-10px)";
+      document.querySelectorAll("div.cap-icon-2")[0].style.opacity = "1";
+      document.querySelectorAll("div.cap-icon-2")[0].style.transform =
+        "translateX(10px)";
+      document.querySelectorAll("div.cap-icon-3")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-icon-3")[0].style.transform =
+        "translateX(-50px)";
+      document.querySelectorAll("div.cap-icon-4")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-icon-4")[0].style.transform =
+        "translateX(50px)";
     }
     if (step1 <= window.pageYOffset && step2 > window.pageYOffset) {
       console.log("Step 2");
       document.querySelectorAll("div.cap-2")[0].style.transform =
-        "translate(0px, 50px)";
-      document.querySelectorAll("div.cap-text-block--1")[0].style.opacity = "1";
-      document.querySelectorAll("div.cap-text-block--1")[1].style.opacity = "1";
-      document.querySelectorAll("div.cap-text-block--2")[0].style.opacity = "0";
-      document.querySelectorAll("div.cap-text-block--2")[1].style.opacity = "0";
+        "translate(0px, 140px)";
+      document.querySelectorAll("div.cap-3")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-text-block--1")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-text-block--1")[0].style.transform =
+        "translateX(50px)";
+      document.querySelectorAll("div.cap-text-block--2")[0].style.opacity = "1";
+      document.querySelectorAll("div.cap-text-block--2")[0].style.transform =
+        "translateX(0)";
+      document.querySelectorAll("div.cap-text-block--3")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-text-block--3")[0].style.transform =
+        "translateX(-50px)";
+
+      document.querySelectorAll("div.cap-icon-1")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-icon-1")[0].style.transform =
+        "translateX(-50px)";
+      document.querySelectorAll("div.cap-icon-2")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-icon-2")[0].style.transform =
+        "translateX(50px)";
+      document.querySelectorAll("div.cap-icon-3")[0].style.opacity = "1";
+      document.querySelectorAll("div.cap-icon-3")[0].style.transform =
+        "translateX(-10px)";
+      document.querySelectorAll("div.cap-icon-4")[0].style.opacity = "1";
+      document.querySelectorAll("div.cap-icon-4")[0].style.transform =
+        "translateX(10px)";
+      document.querySelectorAll("div.cap-icon-5")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-icon-5")[0].style.transform =
+        "translateX(-50px)";
+      document.querySelectorAll("div.cap-icon-6")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-icon-6")[0].style.transform =
+        "translateX(50px)";
     }
     if (step2 <= window.pageYOffset && step3 > window.pageYOffset) {
       console.log("Step 3");
+
       document.querySelectorAll("div.cap-2")[0].style.transform =
-        "translate(0px, 0px)";
-      document.querySelectorAll("div.cap-3")[0].style.opacity = "0";
-      document.querySelectorAll("div.cap-text-block--1")[0].style.opacity = "1";
-      document.querySelectorAll("div.cap-text-block--1")[1].style.opacity = "1";
-      document.querySelectorAll("div.cap-text-block--2")[0].style.opacity = "1";
-      document.querySelectorAll("div.cap-text-block--2")[1].style.opacity = "1";
-      document.querySelectorAll("div.cap-text-title--1")[0].style.opacity = "1";
-      document.querySelectorAll("div.cap-text-title--2")[0].style.opacity = "0";
+        "translate(0px, 80px)";
+      document.querySelectorAll("div.cap-3")[0].style.opacity = "1";
+      document.querySelectorAll("div.cap-3")[0].style.transform =
+        "translate(0px, 250px)";
+
+      document.querySelectorAll("div.cap-text-block--2")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-text-block--2")[0].style.transform =
+        "translateX(50px)";
+      document.querySelectorAll("div.cap-text-block--3")[0].style.opacity = "1";
+      document.querySelectorAll("div.cap-text-block--3")[0].style.transform =
+        "translateX(0)";
+      document.querySelectorAll("div.cap-text-block--4")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-text-block--4")[0].style.transform =
+        "translateX(-50px)";
+
+      document.querySelectorAll("div.cap-icon-3")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-icon-3")[0].style.transform =
+        "translateX(-50px)";
+      document.querySelectorAll("div.cap-icon-4")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-icon-4")[0].style.transform =
+        "translateX(50px)";
+      document.querySelectorAll("div.cap-icon-5")[0].style.opacity = "1";
+      document.querySelectorAll("div.cap-icon-5")[0].style.transform =
+        "translateX(-10px)";
+      document.querySelectorAll("div.cap-icon-6")[0].style.opacity = "1";
+      document.querySelectorAll("div.cap-icon-6")[0].style.transform =
+        "translateX(10px)";
+      document.querySelectorAll("div.cap-icon-7")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-icon-7")[0].style.transform =
+        "translateX(-50px)";
+      document.querySelectorAll("div.cap-icon-8")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-icon-8")[0].style.transform =
+        "translateX(50px)";
     }
     if (step3 <= window.pageYOffset && step4 > window.pageYOffset) {
       console.log("Step 4");
-      document.querySelectorAll("div.cap-3")[0].style.opacity = "1";
+
       document.querySelectorAll("div.cap-3")[0].style.transform =
-        "translate(0px, 120px)";
-      document.querySelectorAll("div.cap-text-block--1")[0].style.opacity = "0";
-      document.querySelectorAll("div.cap-text-block--1")[1].style.opacity = "0";
-      document.querySelectorAll("div.cap-text-block--2")[0].style.opacity = "0";
-      document.querySelectorAll("div.cap-text-block--2")[1].style.opacity = "0";
-      document.querySelectorAll("div.cap-text-title--1")[0].style.opacity = "0";
-      document.querySelectorAll("div.cap-text-title--2")[0].style.opacity = "1";
+        "translate(0px, 190px)";
+
       document.querySelectorAll("div.cap-text-block--3")[0].style.opacity = "0";
-      document.querySelectorAll("div.cap-text-block--3")[1].style.opacity = "0";
+      document.querySelectorAll("div.cap-text-block--3")[0].style.transform =
+        "translateX(50px)";
+      document.querySelectorAll("div.cap-text-block--4")[0].style.opacity = "1";
+      document.querySelectorAll("div.cap-text-block--4")[0].style.transform =
+        "translateX(0)";
+      document.querySelectorAll("div.cap-text-block--5")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-text-block--5")[0].style.transform =
+        "translateX(-50px)";
+
+      document.querySelectorAll("div.cap-icon-5")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-icon-5")[0].style.transform =
+        "translateX(-50px)";
+      document.querySelectorAll("div.cap-icon-6")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-icon-6")[0].style.transform =
+        "translateX(50px)";
+      document.querySelectorAll("div.cap-icon-7")[0].style.opacity = "1";
+      document.querySelectorAll("div.cap-icon-7")[0].style.transform =
+        "translateX(-10px)";
+      document.querySelectorAll("div.cap-icon-8")[0].style.opacity = "1";
+      document.querySelectorAll("div.cap-icon-8")[0].style.transform =
+        "translateX(10px)";
+      document.querySelectorAll("div.cap-icon-9")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-icon-9")[0].style.transform =
+        "translateX(-50px)";
+      document.querySelectorAll("div.cap-icon-10")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-icon-10")[0].style.transform =
+        "translateX(50px)";
     }
 
     if (step4 <= window.pageYOffset && step5 > window.pageYOffset) {
       console.log("Step 5");
+
       document.querySelectorAll("div.cap-3")[0].style.transform =
-        "translate(0px, 70px)";
-      document.querySelectorAll("div.cap-text-block--3")[0].style.opacity = "1";
-      document.querySelectorAll("div.cap-text-block--3")[1].style.opacity = "1";
+        "translate(0px, 130px)";
+
       document.querySelectorAll("div.cap-text-block--4")[0].style.opacity = "0";
-      document.querySelectorAll("div.cap-text-block--4")[1].style.opacity = "0";
+      document.querySelectorAll("div.cap-text-block--4")[0].style.transform =
+        "translateX(50px)";
+      document.querySelectorAll("div.cap-text-block--5")[0].style.opacity = "1";
+      document.querySelectorAll("div.cap-text-block--5")[0].style.transform =
+        "translateX(0)";
+
+      document.querySelectorAll("div.cap-icon-7")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-icon-7")[0].style.transform =
+        "translateX(-50px)";
+      document.querySelectorAll("div.cap-icon-8")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-icon-8")[0].style.transform =
+        "translateX(50px)";
+      document.querySelectorAll("div.cap-icon-9")[0].style.opacity = "1";
+      document.querySelectorAll("div.cap-icon-9")[0].style.transform =
+        "translateX(-10px)";
+      document.querySelectorAll("div.cap-icon-10")[0].style.opacity = "1";
+      document.querySelectorAll("div.cap-icon-10")[0].style.transform =
+        "translateX(10px)";
     }
     if (
       step5 <= window.pageYOffset &&
       distanceBottomToTopSection2 > window.pageYOffset
     ) {
       console.log("Step 6");
-      document.querySelectorAll("div.cap-3")[0].style.transform =
-        "translate(0px, 20px)";
-      document.querySelectorAll("div.cap-text-block--4")[0].style.opacity = "1";
-      document.querySelectorAll("div.cap-text-block--4")[1].style.opacity = "1";
+
+      document.querySelectorAll("div.cap-icon-5")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-icon-5")[0].style.transform =
+        "translateX(-50px)";
+      document.querySelectorAll("div.cap-icon-6")[0].style.opacity = "0";
+      document.querySelectorAll("div.cap-icon-6")[0].style.transform =
+        "translateX(50px)";
     }
     if (distanceToTopRing > window.pageYOffset) {
       setProgress1(0);

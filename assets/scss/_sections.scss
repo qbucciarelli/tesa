@@ -6,7 +6,7 @@
 
   &-animation {
     height: 600vh;
-    z-index: -1;
+    z-index: 0;
   }
 
   &-jumbotron {
@@ -15,6 +15,10 @@
     align-items: center;
     background-color: #1f2120;
     height: 100vh;
+    padding: 0 0;
+
+    background-image: url("../images/hero_home.jpg");
+    background-size: cover;
   }
 
   &-ring {

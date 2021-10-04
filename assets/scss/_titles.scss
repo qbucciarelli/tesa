@@ -27,6 +27,9 @@
 }
 
 .testimonio-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   h3 {
     color: #242424;
     font-size: 18px;
@@ -43,6 +46,11 @@
     letter-spacing: 0px;
     line-height: 29px;
     margin-bottom: 0;
+  }
+  .testimonio-picture img {
+    width: 82px;
+    height: 82px;
+    margin-right: 20px;
   }
 }
 

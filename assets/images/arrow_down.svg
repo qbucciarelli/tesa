@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="52px" viewBox="0 0 20 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>ICON/ARROW/LIGHT/DEFAULT/LEFT Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="HOME" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="tesacork-home-desktop_02" transform="translate(-711.000000, -825.000000)" fill="#FFFFFF">
+            <g id="ICON/ARROW/LIGHT/DEFAULT/DOWN" transform="translate(690.000000, 820.000000)">
+                <g id="ICON/ARROW/DARK/DEFAULT-Copy-2" transform="translate(31.000000, 31.000000) scale(1, -1) translate(-31.000000, -31.000000) translate(21.000000, 5.000000)">
+                    <g id="mdi-light:arrow-right">
+                        <g id="Icon">
+                            <g id="right-copy" transform="translate(10.000000, 26.000000) scale(-1, 1) translate(-10.000000, -26.000000) ">
+                                <path d="M35.8168945,25.5581201 L26.4418945,16.1831201 C26.1977344,15.93896 25.8022266,15.93896 25.558125,16.1831201 C25.3139648,16.4272803 25.3139648,16.8227881 25.558125,17.0668896 L33.86625,25.3750146 L-15.3749805,25.3750146 C-15.7204492,25.3750146 -16,25.6545654 -16,26.0000342 C-16,26.3455029 -15.7204492,26.6250537 -15.3749805,26.6250537 L33.86625,26.6250537 L25.558125,34.9331201 C25.3139648,35.1772803 25.3139648,35.5727881 25.558125,35.8168896 C25.6801758,35.9389404 25.8401367,36 26.0000391,36 C26.1599414,36 26.3198438,35.9389404 26.4419531,35.8168896 L35.8169531,26.4418896 C36.0610547,26.1977881 36.0610547,25.8022803 35.8168945,25.5581201 Z" id="Path" transform="translate(10.000011, 26.000000) rotate(-90.000000) translate(-10.000011, -26.000000) "></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

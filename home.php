@@ -14,15 +14,18 @@ get_header();
 		<div class="row">
 			<div class="col-12 col-md-6 offset-md-3">
 				<div class="jumbotron">
-					<div class="jumbotron-logo"></div>
+					<div class="jumbotron-logo">
+						<img src="<?php echo get_site_url(); ?>/wp-content/themes/tesa-theme/assets/images/logo_tesa_hero.svg" alt="">
+					</div>
 					<div class="jumbotron-title">Creando tapones para vinos espumosos desde 1927</div>
+					<a class="jumbotron-down-link smooth-link" href="#section-animation"></a>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="section section-animation">
+<div class="section section-animation" id="section-animation">
 	<div class="cap-animation">
 		<div class="cap-titles">
 			<div class="container">
@@ -30,89 +33,76 @@ get_header();
 					<div class="col-12 cap-text-main-title">
 						<h2>Descubre el tapón TESA</h2>
 					</div>
-					<div class="col-12 cap-text-title cap-text-title--1">
-						<h3>Seguridad</h3>
-					</div>
-					<div class="col-12 cap-text-title cap-text-title--2">
-						<h3>Calidad</h3>
-					</div>
 				</div>
 			</div>
 		</div>
 		<div class="cap-text cap-text--1">
-			<div class="container">
-				<div class="row">
-
-					<div class="col-4 cap-text-block cap-text-block--1">
-						<h4>Estéril y libre de TCA</h4>
-						<p>Nuestros tapones pasan 3 estrictos controles de esterilización y 7 exámenes diferentes.</p>
-						<a href="/">Sólo los mejores aprueban</a>
-					</div>
-					<div class="col-4 offset-4 cap-text-block cap-text-block--1">
-						<h4>Precisión milimétrica</h4>
-						<p>7 revisiones técnicas y 0 problemas. Creamos el tapón con las medidas exactas que tu linea de embotellado necesite para que todo vaya suave como la seda.</p>
-						<a href="/">Esculpidos a la perfección</a>
-					</div>
-					<div class="col-4 mt-3 cap-text-block cap-text-block--2">
-						<h4>Densidad y consitencia precisa</h4>
-						<p>Denso y consistente. Tapón anti roturas y con las
-							cualidades precisas para un perfecto
-							descorchado.</p>
-						<a href="/">El comportamiento idóneo</a>
-					</div>
-					<div class="col-4 mt-3 offset-4 cap-text-block cap-text-block--2">
-						<h4>Acabados perfectos</h4>
-						<p>Seleccionados a mano para que no sólo su
-							desempeño sea técnicamente perfectos si no
-							también su estética.</p>
-						<a href="/">Pequeñas obras de arte</a>
-					</div>
-				</div>
+			<div class="col-6 cap-text-block cap-text-block--1">
+				<h4>Estéril y libre de TCA</h4>
+				<ul>
+					<li>100% libre de TCA</li>
+					<li>Análisis químico propio: el más exigente de la industria</li>
+					<li>Selección final realizada manualmente por especialistas</li>
+					<li>Esterilizado hasta en tres ocasiones</li>
+				</ul>
+				<a href="/" class="btn btn-primary">Descubre todos sus beneficios</a>
 			</div>
-		</div>
-		<div class="cap-text cap-text--2">
-			<div class="container">
-				<div class="row">
-					<div class="col-4 cap-text-block cap-text-block--3">
-						<h4>Corcho 100% natura</h4>
-						<p>Ecología y sostenibilidad forman parte de
-							nuestros mayores valores. Nuestra empresa y
-							nuestro producto no tienen huella ambiental.</p>
-						<a href="/">Natural y ecológico</a>
-					</div>
-					<div class="col-4 offset-4 cap-text-block cap-text-block--3">
-						<h4>Especialización</h4>
-						<p>En TESA sólo hacemos tapones para vinos
-							espumosos. Con cada generación hemos
-							corregido y aumentado la calidad de lo que
-							hacemos hasta alcanzar un producto de calidad
-							premium, seguro e innovador.</p>
-						<a href="/">Descubre nuestra tradición</a>
-					</div>
-					<div class="col-4 mt-3 cap-text-block cap-text-block--4">
-						<h4>Máxima personalización</h4>
-						<p>Tenemos control productivo total y por eso
-							podemos hacer un tapón único para tí que se
-							adapte a tu marca y sus necesidades.
-							Diseñamos la pareja ideal para tu vino
-							espumoso.</p>
-						<a href="/">Crea el tuyo</a>
-					</div>
-					<div class="col-4 mt-3 offset-4 cap-text-block cap-text-block--4">
-						<h4>Homogeneidad y rapidez</h4>
-						<p>Buscamos la excelencia en nuestro producto
-							pero también en nuestro servicio. Te
-							garantizamos homogeneidad, rapidez y
-							compromiso en cada compra.</p>
-						<a href="/">Calidad de nuestros servicios</a>
-					</div>
-				</div>
+			<div class="col-6 cap-text-block cap-text-block--2">
+				<h4>Estéril y libre de TCA</h4>
+				<ul>
+					<li>100% libre de TCA</li>
+					<li>Análisis químico propio: el más exigente de la industria</li>
+					<li>Selección final realizada manualmente por especialistas</li>
+					<li>Esterilizado hasta en tres ocasiones</li>
+				</ul>
+				<a href="/" class="btn btn-primary">Descubre todos sus beneficios</a>
+			</div>
+			<div class="col-6 cap-text-block cap-text-block--3">
+				<h4>Estéril y libre de TCA</h4>
+				<ul>
+					<li>100% libre de TCA</li>
+					<li>Análisis químico propio: el más exigente de la industria</li>
+					<li>Selección final realizada manualmente por especialistas</li>
+					<li>Esterilizado hasta en tres ocasiones</li>
+				</ul>
+				<a href="/" class="btn btn-primary">Descubre todos sus beneficios</a>
+			</div>
+			<div class="col-6 cap-text-block cap-text-block--4">
+				<h4>Estéril y libre de TCA</h4>
+				<ul>
+					<li>100% libre de TCA</li>
+					<li>Análisis químico propio: el más exigente de la industria</li>
+					<li>Selección final realizada manualmente por especialistas</li>
+					<li>Esterilizado hasta en tres ocasiones</li>
+				</ul>
+				<a href="/" class="btn btn-primary">Descubre todos sus beneficios</a>
+			</div>
+			<div class="col-6 cap-text-block cap-text-block--5">
+				<h4>Estéril y libre de TCA</h4>
+				<ul>
+					<li>100% libre de TCA</li>
+					<li>Análisis químico propio: el más exigente de la industria</li>
+					<li>Selección final realizada manualmente por especialistas</li>
+					<li>Esterilizado hasta en tres ocasiones</li>
+				</ul>
+				<a href="/" class="btn btn-primary">Descubre todos sus beneficios</a>
 			</div>
 		</div>
 	</div>
 </div>
 <div class="caps">
-	<div class="cap cap-1"></div>
+	<div class="cap cap-1">
+		<div class="cap-icon cap-icon-1"></div>
+		<div class="cap-icon cap-icon-2"></div>
+		<div class="cap-icon cap-icon-3"></div>
+		<div class="cap-icon cap-icon-4"></div>
+		<div class="cap-icon cap-icon-5"></div>
+		<div class="cap-icon cap-icon-6"></div>
+		<div class="cap-icon cap-icon-7"></div>
+		<div class="cap-icon cap-icon-8"></div>
+		<div class="cap-icon cap-icon-9"></div>
+		<div class="cap-icon cap-icon-10"></div>
+	</div>
 	<div class="cap cap-2"></div>
 	<div class="cap cap-3"></div>
 </div>
@@ -175,8 +165,13 @@ get_header();
 		<div class="row">
 			<div class="testimonio col-12 col-md-4">
 				<div class="testimonio-header">
-					<h3>Jose Antonio Roure</h3>
-					<h4>Nombre empresa, cargo</h4>
+					<div class="testimonio-picture">
+						<img src="<?php echo get_site_url(); ?>/wp-content/themes/tesa-theme/assets/images/testimonios_01.png" alt="">
+					</div>
+					<div class="testimonio-text">
+						<h3>Jose Antonio Roure</h3>
+						<h4>Nombre empresa, cargo</h4>
+					</div>
 				</div>
 				<div class="testimonio-body">
 					“La calidad y precio de mis vinos han aumentado gracias al tapón de dos discos de TESA. Llevo 15 años con ellos y siento que somos una pequeña familia.”
@@ -184,8 +179,13 @@ get_header();
 			</div>
 			<div class="testimonio col-12 col-md-4">
 				<div class="testimonio-header">
-					<h3>Jose Antonio Roure</h3>
-					<h4>Nombre empresa, cargo</h4>
+					<div class="testimonio-picture">
+						<img src="<?php echo get_site_url(); ?>/wp-content/themes/tesa-theme/assets/images/testimonios_02.png" alt="">
+					</div>
+					<div class="testimonio-text">
+						<h3>Jose Antonio Roure</h3>
+						<h4>Nombre empresa, cargo</h4>
+					</div>
 				</div>
 				<div class="testimonio-body">
 					“La calidad y precio de mis vinos han aumentado gracias al tapón de dos discos de TESA. Llevo 15 años con ellos y siento que somos una pequeña familia.”
@@ -193,8 +193,13 @@ get_header();
 			</div>
 			<div class="testimonio col-12 col-md-4">
 				<div class="testimonio-header">
-					<h3>Jose Antonio Roure</h3>
-					<h4>Nombre empresa, cargo</h4>
+					<div class="testimonio-picture">
+						<img src="<?php echo get_site_url(); ?>/wp-content/themes/tesa-theme/assets/images/testimonios_03.png" alt="">
+					</div>
+					<div class="testimonio-text">
+						<h3>Jose Antonio Roure</h3>
+						<h4>Nombre empresa, cargo</h4>
+					</div>
 				</div>
 				<div class="testimonio-body">
 					“La calidad y precio de mis vinos han aumentado gracias al tapón de dos discos de TESA. Llevo 15 años con ellos y siento que somos una pequeña familia.”

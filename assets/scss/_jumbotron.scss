@@ -3,4 +3,34 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+}
+
+.jumbotron-logo {
+  margin-top: auto;
+}
+.jumbotron-title {
+  margin-top: 80px;
+  margin-bottom: auto;
+
+  font-family: "presicav";
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.04;
+  text-align: center;
+}
+
+.jumbotron-down-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 61px;
+  height: 61px;
+  margin-bottom: 20px;
+
+  background-image: url("../images/arrow_down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }

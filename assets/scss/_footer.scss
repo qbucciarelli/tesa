@@ -3,6 +3,7 @@
   color: white;
   position: relative;
   z-index: 1;
+  margin-top: 80px;
   .third_widget_area {
     @extend .col-12, .col-md-2;
     &:nth-child(4),
@@ -27,12 +28,16 @@
     }
   }
   > .container:first-child {
-    padding: 60px 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   a {
     color: white;
     &:hover {
       opacity: 0.8;
+    }
+    &:visited {
+      color: white;
     }
   }
   .widget-title,
@@ -102,5 +107,13 @@
         border-left: 1px solid white;
       }
     }
+  }
+
+  .menu-item a[aria-current="page"] {
+    color: white;
+  }
+
+  .wp-block-image.size-full {
+    max-width: 80px;
   }
 }

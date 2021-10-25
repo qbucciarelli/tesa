@@ -1,12 +1,16 @@
 .section {
   position: relative;
-  z-index: 100;
+  z-index: 0;
   background-color: white;
   padding: 80px 0;
 
   &-animation {
     height: 600vh;
     z-index: 0;
+
+    @include media-breakpoint-down(lg) {
+      height: inherit;
+    }
   }
 
   &-jumbotron {
@@ -14,14 +18,26 @@
     justify-content: center;
     align-items: center;
     background-color: #1f2120;
-    height: 100vh;
+    height: calc(100vh - 70px);
     padding: 0 0;
-
-    background-image: url("../images/hero_home.jpg");
     background-size: cover;
+    background-position: center;
   }
 
   &-ring {
     background-color: #1f2120;
+    p {
+      color: white;
+      margin-top: 40px;
+    }
+  }
+
+  &-controles {
+    background-color: #f8f9fa;
+  }
+  &-articles {
+    margin-top: -100px;
+    position: relative;
+    z-index: 1;
   }
 }

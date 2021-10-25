@@ -1,0 +1,184 @@
+.blog {
+  .section-jumbotron {
+    height: 50vh;
+  }
+  .jumbotron {
+    height: 50vh;
+  }
+  .jumbotron-title {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  article:nth-child(1) {
+    min-width: 100%;
+  }
+  .card {
+    border: none;
+    border-radius: 0;
+  }
+  .post-thumbnail {
+    margin: 0;
+  }
+
+  .section-articles-title {
+    font-family: "presicav";
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.07;
+    text-align: center;
+    color: #242424;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background-color: #f8f9fa;
+  }
+
+  .articles {
+    @extend .row;
+    article:not(:first-child) {
+      @extend .col-md-4;
+      .card {
+        border: solid 1px #e5e5e5;
+        background-color: #fff;
+        margin-bottom: 40px !important;
+      }
+      .card-image,
+      .card-text {
+        @extend .col-12;
+      }
+      .card-title {
+        margin-bottom: 20px;
+      }
+      .card-title a {
+        display: flex;
+      }
+      .card-text {
+        padding: 20px;
+        font-family: "roboto";
+        font-size: 16px;
+        line-height: 1.5;
+        color: #242424;
+      }
+      .link-blog {
+        font-family: "roboto";
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.5;
+        color: #b67f5f;
+        text-decoration: underline;
+        transition: 0.2s all;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+    .card-body {
+      padding: 0;
+    }
+  }
+  .card-title a {
+    font-family: "Roboto";
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.1;
+    color: #242424;
+  }
+}
+
+.blog:not(.paged) {
+  article:first-child {
+    order: 0;
+    margin-bottom: 60px;
+    .card {
+      border: none;
+      background-color: #f8f9fa;
+      padding-bottom: 60px !important;
+      margin-bottom: 0 !important;
+    }
+    .card-body {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      @extend .row;
+    }
+    .card-image {
+      @extend .col-md-4, .offset-md-1, .col-10;
+    }
+    .card-text {
+      @extend .col-md-6, .col-10;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      font-family: "roboto";
+      font-size: 16px;
+      line-height: 1.5;
+      color: #242424;
+      margin-right: auto;
+      a {
+        margin-top: auto;
+      }
+      @include media-breakpoint-down(md) {
+        margin-top: 20px;
+      }
+    }
+    .link-blog {
+      @extend .btn, .btn-secondary;
+    }
+  }
+}
+
+.blog.paged {
+  article:first-child {
+    min-width: inherit;
+  }
+  .section-articles {
+    margin-top: 80px;
+  }
+  .section-articles-title {
+    display: none !important;
+  }
+  .articles {
+    @extend .row;
+    article {
+      @extend .col-md-4;
+      .card {
+        border: solid 1px #e5e5e5;
+        background-color: #fff;
+        margin-bottom: 40px !important;
+      }
+      .card-image,
+      .card-text {
+        @extend .col-12;
+      }
+      .card-title {
+        margin-bottom: 20px;
+      }
+      .card-title a {
+        display: flex;
+      }
+      .card-text {
+        padding: 20px;
+        font-family: "roboto";
+        font-size: 16px;
+        line-height: 1.5;
+        color: #242424;
+      }
+      .link-blog {
+        font-family: "roboto";
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.5;
+        color: #b67f5f;
+        text-decoration: underline;
+        transition: 0.2s all;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+    .card-body {
+      padding: 0;
+    }
+  }
+}

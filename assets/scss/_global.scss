@@ -19,9 +19,107 @@ body {
   border: 0;
   padding: 15px 25px;
   transition: 0.2s all;
+
+  max-width: max-content;
+  font-family: "roboto";
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+  color: #fff;
+  transition: 0.2s all;
   &:hover {
     background-color: #172332;
     opacity: 0.8;
+    cursor: pointer;
+  }
+  &:active {
+    background-color: #334f70;
+  }
+}
+
+.btn-secondary {
+  background-color: #b67f5f;
+  border-radius: 2px;
+  border: 0;
+  padding: 15px 25px;
+  transition: 0.2s all;
+
+  max-width: max-content;
+  font-family: "roboto";
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+  color: #fff;
+  transition: 0.2s all;
+  &:hover {
+    background-color: #8c5c40;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  &:active {
+    background-color: #d9a57a;
+  }
+}
+
+.modal-body {
+  position: relative;
+  padding: 0px;
+}
+.close {
+  position: absolute;
+  right: -30px;
+  top: 0;
+  z-index: 999;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #fff;
+  opacity: 1;
+}
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.embed-responsive-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.embed-responsive-16by9::before {
+  padding-top: 56.25%;
+}
+
+.embed-responsive::before {
+  display: block;
+  content: "";
+}
+
+.modal-content {
+  .modal-close {
+    position: absolute;
+    position: absolute;
+    right: -40px;
+    top: -15px;
+  }
+}
+
+.close.modal-close {
+  color: white;
+  opacity: 0.5;
+  transition: 0.2s all;
+  &:hover {
+    opacity: 1;
     cursor: pointer;
   }
 }

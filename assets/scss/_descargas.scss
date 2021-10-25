@@ -1,0 +1,96 @@
+.page-template-descargas {
+  .section-jumbotron {
+    height: 50vh;
+  }
+  .jumbotron {
+    height: 50vh;
+  }
+  .jumbotron-title {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .guia-main-text {
+    margin: 0 0 60px;
+    font-family: roboto;
+    font-size: 18px;
+    line-height: 1.61;
+    text-align: center;
+    color: #242424;
+  }
+
+  .guia-main-title {
+    padding-bottom: 20px;
+  }
+
+  .guia-cta + .guia-cta {
+    @include media-breakpoint-down(lg) {
+      margin-top: 60px;
+    }
+  }
+
+  .guia-cta {
+    border: solid 1px #e5e5e5;
+    margin-bottom: 60px;
+  }
+
+  .guia-picture img {
+    width: 100%;
+  }
+
+  .guia-title h3 {
+    padding: 20px;
+    font-family: "roboto";
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.61;
+    color: #242424;
+  }
+
+  .guia-body {
+    padding: 20px;
+    font-family: "roboto";
+    font-size: 16px;
+    line-height: 1.5;
+    color: #242424;
+  }
+
+  .guia-link {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    font-family: "roboto";
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #172332;
+    text-decoration: underline;
+    transition: 0.2s all;
+
+    &:hover {
+      opacity: 0.8;
+      color: #172332;
+    }
+  }
+
+  .section-form {
+    &:before {
+      background-color: #172332;
+      height: 100%;
+    }
+  }
+  #footer {
+    margin-top: 0;
+  }
+
+  .section-form {
+    &:before {
+      background-color: #172332;
+      height: 100%;
+    }
+  }
+  #footer {
+    margin-top: 0;
+  }
+}

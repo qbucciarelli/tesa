@@ -1,0 +1,76 @@
+.page-template-contacto {
+  .section-jumbotron {
+    height: 50vh;
+  }
+  .jumbotron {
+    height: 50vh;
+  }
+  .jumbotron-title {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .informacion-list-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 0 20px 0;
+    font-family: "roboto";
+    font-size: 16px;
+    line-height: 1.5;
+    color: #242424;
+
+    img {
+      width: 17px;
+      margin-right: 10px;
+    }
+  }
+
+  .jumbotron-title {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .informacion-content {
+    border: solid 1px #e5e5e5;
+    background-color: #fff;
+  }
+
+  .informacion-list {
+    padding: 40px;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  .descargas-picture img {
+    width: 40px;
+  }
+  .descargas-title h3 {
+    margin: 20px 0;
+    font-family: "roboto";
+    font-weight: bold;
+    line-height: 1.1;
+    color: #242424;
+  }
+
+  .descargas-body {
+    margin: 0 0 40px 0;
+    font-family: "roboto";
+    font-size: 16px;
+    line-height: 1.5;
+    color: #242424;
+  }
+
+  .descargas + .descargas {
+    @include media-breakpoint-down(lg) {
+      margin-top: 60px;
+    }
+  }
+
+  .section-form {
+    &:before {
+      content: none;
+    }
+  }
+  #footer {
+    margin-top: 0;
+  }
+}

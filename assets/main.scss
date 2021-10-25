@@ -67,12 +67,12 @@ $link-decoration: none;
 @import "../node_modules/bootstrap/scss/root";
 
 // 4. Include any optional Bootstrap CSS as needed: Uncomment all components that are not needed to reduce the filesize
+@import "../node_modules/bootstrap/scss/grid";
 @import "../node_modules/bootstrap/scss/utilities";
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/type";
 @import "../node_modules/bootstrap/scss/images";
 @import "../node_modules/bootstrap/scss/containers";
-@import "../node_modules/bootstrap/scss/grid";
 @import "../node_modules/bootstrap/scss/tables";
 @import "../node_modules/bootstrap/scss/forms";
 @import "../node_modules/bootstrap/scss/buttons";
@@ -112,6 +112,11 @@ $link-decoration: none;
 @import "scss/header";
 @import "scss/footer";
 @import "scss/ringsanimation";
+@import "scss/form";
+@import "scss/metodo";
+@import "scss/contacto";
+@import "scss/descargas";
+@import "scss/blog";
 
 /**
  * General
@@ -119,6 +124,18 @@ $link-decoration: none;
 
 img {
   vertical-align: middle;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1020px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1020px;
+  }
 }
 
 /**
@@ -147,8 +164,7 @@ body.admin-bar {
 /* WordPress Embeds */
 
 .post-thumbnail,
-.wp-video,
-.embed-responsive {
+.wp-video {
   margin: 5px 0;
   width: 100% !important;
 }
@@ -190,14 +206,6 @@ body.admin-bar {
 #footer {
   p {
     margin-top: 10px;
-  }
-
-  .menu-item {
-    a {
-      &[aria-current="page"] {
-        color: $link-hover-color;
-      }
-    }
   }
 }
 

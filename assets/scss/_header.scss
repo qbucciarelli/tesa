@@ -2,19 +2,45 @@ header {
   position: relative;
   z-index: 1000;
   background-color: #1f2120;
+  padding: 10px 23px;
+  min-height: 70px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .navbar {
+    width: 100%;
+  }
+
+  .navbar-brand img {
+    height: inherit;
+    width: 177px;
+  }
+
+  .navbar-brand {
+    padding: 10px 0;
+  }
+}
+
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .navbar-dark .navbar-nav .nav-link {
   color: white;
   font-size: 14px;
   line-height: 21px;
-  padding-left: 20px;
   padding-right: 20px;
   &:hover {
     color: white;
     opacity: 0.8;
   }
+  @include media-breakpoint-down(lg) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
+
 .navbar-dark .navbar-toggler {
   border: none;
   color: transparent;
@@ -24,9 +50,28 @@ header {
   right: 0;
 }
 
-@include media-breakpoint-down(md) {
-  .navbar-nav {
+@include media-breakpoint-down(lg) {
+  #menu-main-menu {
     height: 100vh;
+  }
+
+  .navbar-collapse {
+    margin-top: 20px;
+    border-top: solid 1px #464646;
+  }
+
+  #menu-main-menu {
+    .menut-item {
+      font-family: "roboto";
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.61;
+      color: #fff;
+    }
+
+    .menu-item + .menu-item {
+      border-top: solid 1px #464646;
+    }
   }
 
   .navbar-dark .navbar-nav .nav-link,
@@ -40,11 +85,10 @@ header {
     margin: 10px 0;
   }
   .menu-item + .menu-item {
-    border-top: 1px solid #464646;
-  }
-
-  #menu-main-menu {
-    margin-top: 20px;
+    border-top: none;
+    @include media-breakpoint-up(lg) {
+      border-top: 1px solid #464646;
+    }
   }
 
   .wpml-ls-item {

@@ -49,7 +49,7 @@
         margin-bottom: 20px;
       }
       .card-title a {
-        display: flex;
+        display: block;
       }
       .card-text {
         padding: 20px;
@@ -76,6 +76,7 @@
     }
   }
   .card-title a {
+    display: block;
     font-family: "Roboto";
     font-size: 21px;
     font-weight: bold;

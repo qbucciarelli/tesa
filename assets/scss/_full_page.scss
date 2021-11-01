@@ -1,0 +1,145 @@
+.page-template-page-full,
+.post-template-default.single {
+  .section-jumbotron {
+    height: 50vh;
+  }
+  .jumbotron {
+    height: 50vh;
+  }
+  .jumbotron-title {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+  article,
+  .content {
+    h1 {
+      font-family: "presicav";
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 1.07;
+      color: #242424;
+      margin: 20px 0 40px;
+    }
+    img {
+      width: 100%;
+    }
+    .post-thumbnail + .date-publish {
+      margin-bottom: 40px;
+    }
+    .date-publish {
+      margin-top: 10px;
+    }
+
+    div > ul > li {
+      padding: 0;
+      list-style: none;
+      position: relative;
+      align-items: center;
+      + li {
+        margin: 20px 0 0 0;
+      }
+      strong:first-child {
+        display: inline;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.61;
+        color: #242424;
+        + p {
+          margin-top: 15px;
+        }
+      }
+      &:before {
+        background-color: #334f70;
+        content: "";
+        float: left;
+        height: 10px;
+        position: relative;
+        width: 10px;
+        top: 7px;
+        left: 0;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+    }
+    .date-publish {
+      opacity: 0.5;
+      font-family: "roboto";
+      font-size: 14px;
+      line-height: 1.5;
+      color: #242424;
+    }
+    h2 {
+      font-family: "roboto";
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 1.1;
+      color: #242424;
+    }
+    h3 {
+      font-family: "roboto";
+      font-size: 21px;
+      font-weight: bold;
+      line-height: 1.1;
+      color: #242424;
+    }
+    h4 {
+      font-family: "roboto";
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.61;
+      color: #242424;
+    }
+    h5 {
+      font-family: "roboto";
+      font-size: 16px;
+      font-weight: bold;
+      color: #242424;
+    }
+    h6 {
+      font-family: "roboto";
+      font-size: 14px;
+      font-weight: bold;
+      color: #242424;
+    }
+    .back-to-blog {
+      font-family: "roboto";
+      font-size: 16px;
+      line-height: 1.5;
+      color: #334f70;
+      text-decoration: underline;
+      transition: 0.2s all;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+    .wp-block-image figcaption {
+      opacity: 0.5;
+      font-family: "roboto";
+      font-size: 14px;
+      line-height: 1.5;
+      color: #242424;
+    }
+    .wp-block-image {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    ul {
+      margin: 20px 0;
+    }
+  }
+  #footer {
+    margin-top: 0;
+  }
+}

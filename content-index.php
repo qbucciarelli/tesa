@@ -26,12 +26,7 @@
 				endif;
 				?>
 				<?php
-
-				if (is_search()) :
-					the_excerpt();
-				else :
-					the_content();
-				endif;
+				echo '<p>' . wp_trim_words(get_the_content(), 30, '[…]') . '</p>';
 				?>
 				<a href="<?php echo get_the_permalink(); ?>" class="link-blog"><?php esc_html_e('Leer artículo', 'tesa-theme'); ?></a>
 				<?php wp_link_pages(array('before' => '<div class="page-link"><span>' . esc_html__('Pages:', 'tesa-theme') . '</span>', 'after' => '</div>')); ?>

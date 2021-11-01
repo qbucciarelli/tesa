@@ -2,6 +2,7 @@
 import * as bootstrap from "bootstrap";
 import { animationCaps } from "./js/_animationsCaps";
 import { animationsRings } from "./js/_animationsRings";
+import { animationProduct } from "./js/_animationProduct";
 
 (function () {
   ("use strict");
@@ -79,5 +80,11 @@ import { animationsRings } from "./js/_animationsRings";
       animationCaps();
       animationsRings();
     };
+  }
+
+  if (
+    document.querySelector("body").classList.contains("page-template-producto ")
+  ) {
+    animationCaps();
   }
 })();

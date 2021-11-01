@@ -72,7 +72,7 @@ $image = get_field('image')
 <div class="section section-proceso">
 	<div class="container">
 		<div class="row">
-			<div class="col-12">
+			<div class="offset-0 offset-md-2 col-md-8 col-12">
 				<h2 class="proceso-title text-left text-md-center"><?php the_field('proceso-title'); ?></h2>
 			</div>
 		</div>

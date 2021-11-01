@@ -1,4 +1,4 @@
-header {
+header.header {
   position: relative;
   z-index: 1000;
   background-color: #1f2120;
@@ -50,6 +50,10 @@ header {
   right: 0;
 }
 
+.wpml-ls-item {
+  display: none;
+}
+
 @include media-breakpoint-down(lg) {
   #menu-main-menu {
     height: 100vh;
@@ -92,7 +96,8 @@ header {
   }
 
   .wpml-ls-item {
-    display: flex;
+    display: none;
+    // display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     .nav-link {

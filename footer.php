@@ -1,3 +1,15 @@
+<?php
+// If Single or Archive (Category, Tag, Author or a Date based page).
+if (is_single() || is_archive()) :
+?>
+	</div>
+	</div>
+	</div>
+	</div>
+<?php
+endif;
+?>
+
 </main><!-- /#main -->
 <footer id="footer">
 	<div class="container">

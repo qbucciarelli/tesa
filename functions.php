@@ -200,9 +200,9 @@ if (!function_exists('tesa_theme_content_nav')) :
 
 		if ($wp_query->max_num_pages > 1) :
 ?>
-			<div id="<?php echo esc_attr($nav_id); ?>" class="d-flex mb-4 justify-content-between">
-				<div><?php next_posts_link('<span aria-hidden="true">&larr;</span> ' . esc_html__('Older posts', 'tesa-theme')); ?></div>
-				<div><?php previous_posts_link(esc_html__('Newer posts', 'tesa-theme') . ' <span aria-hidden="true">&rarr;</span>'); ?></div>
+			<div id="<?php echo esc_attr($nav_id); ?>" class="d-flex mb-4 justify-content-center">
+				<div><?php next_posts_link(esc_html__('Entradas antiguas', 'tesa-theme')); ?></div>
+				<div><?php previous_posts_link(esc_html__('Entradas nuevas', 'tesa-theme')); ?></div>
 			</div><!-- /.d-flex -->
 			<?php
 		else :
@@ -213,7 +213,7 @@ if (!function_exists('tesa_theme_content_nav')) :
 	// Add Class.
 	function posts_link_attributes()
 	{
-		return 'class="btn btn-secondary btn-lg"';
+		return 'class="btn btn-primary btn-lg"';
 	}
 	add_filter('next_posts_link_attributes', 'posts_link_attributes');
 	add_filter('previous_posts_link_attributes', 'posts_link_attributes');

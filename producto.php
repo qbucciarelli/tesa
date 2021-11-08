@@ -57,7 +57,7 @@ $image = get_field('image')
 <div class="section section-pareja" id="section-pareja">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 col-md-10 offset-0 offset-md-1">
+			<div class="col-12">
 				<h2><?php the_field('pareja-title'); ?></h2>
 			</div>
 		</div>
@@ -99,10 +99,10 @@ $image = get_field('image')
 			<?php $currentTab = get_row_index();
 			?>
 			<div id="tab<?php echo get_row_index() ?>" class="tab-pane fade row <?php echo $activeTab ?>">
-				<div class="col-12 col-md-3 offset-0 offset-md-1 d-flex justify-content-center align-items-center">
+				<div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
 					<img src="<?php the_sub_field('pareja-repeater-image'); ?>" alt="<?php the_sub_field('pareja-repeater-title'); ?>" />
 				</div>
-				<div class="col-12 col-md-7">
+				<div class="col-12 offset-0 offset-md-1 col-md-7">
 					<h3><?php the_sub_field('pareja-repeater-title'); ?></h3>
 					<p><?php the_sub_field('pareja-repeater-text'); ?></p>
 					<div class="accordion" id="accordionExample">
@@ -116,13 +116,13 @@ $image = get_field('image')
 								<div class="card">
 									<div class="card-header" id="headingOne">
 										<h5 class="mb-0">
-											<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse<?php echo $currentTab ?><?php echo get_row_index() ?>" aria-expanded="true" aria-controls="collapse<?php echo $currentTab ?><?php echo get_row_index() ?>">
+											<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse<?php echo $currentTab ?><?php echo get_row_index() ?>" aria-expanded="false" aria-controls="collapse<?php echo $currentTab ?><?php echo get_row_index() ?>">
 												<?php the_sub_field('pareja-repeater-repeater-title') ?>
 											</button>
 										</h5>
 									</div>
 
-									<div id="collapse<?php echo $currentTab ?><?php echo get_row_index() ?>" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+									<div id="collapse<?php echo $currentTab ?><?php echo get_row_index() ?>" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
 										<div class="card-body">
 											<?php the_sub_field('pareja-repeater-repeater-text') ?>
 										</div>
@@ -207,7 +207,7 @@ $image = get_field('image')
 <div class="section section-proceso">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 col-md-10 offset-0 offset-md-1">
+			<div class="col-12">
 				<h2><?php the_field('proceso-title') ?></h2>
 			</div>
 		</div>
@@ -276,7 +276,9 @@ $image = get_field('image')
 
 					<div class="client-item col-12 col-sm-4 col-md-2">
 						<div class="client-item-img">
-							<img src="<?php the_sub_field('client-repeater-image') ?>" />
+							<a href="<?php the_sub_field('client-repeater-url') ?>">
+								<img src="<?php the_sub_field('client-repeater-image') ?>" />
+							</a>
 						</div>
 					</div>
 			<?php
@@ -295,20 +297,25 @@ $image = get_field('image')
 <div class="section section-form">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 form-container">
-				<h2 class="form-title col-12 text-left">Escríbenos</h2>
-				<!--[if lte IE 8]>
+			<div class="col-12">
+				<div class=" form-container">
+					<div class="col-md-10 offset-md-1">
+						<h2 class="form-title col-12 text-left"><?php the_field('contact-title') ?></h2>
+						<p class="form-text col-12 text-left"><?php the_field('contact-text') ?></p>
+						<!--[if lte IE 8]>
 							<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
 							<![endif]-->
-				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-				<script>
-					hbspt.forms.create({
-						region: "na1",
-						portalId: "20213022",
-						formId: "4a9d00ec-c7a4-41be-9609-42a780735762",
-						css: ""
-					});
-				</script>
+						<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+						<script>
+							hbspt.forms.create({
+								region: "na1",
+								portalId: "20213022",
+								formId: "4a9d00ec-c7a4-41be-9609-42a780735762",
+								css: ""
+							});
+						</script>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

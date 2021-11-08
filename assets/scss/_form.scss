@@ -16,12 +16,12 @@
   input,
   select,
   textarea {
-    @extend .form-control;
+    // @extend .form-control;
     border-radius: 2px;
     border: solid 1px #172332;
     background-color: #fff;
     min-height: 50px !important;
-    color: #24242450;
+    color: #24242480;
     &:hover,
     &:active,
     &:focus {
@@ -32,8 +32,13 @@
       color: #24242480;
     }
   }
-  p {
+  p,
+  .legal-consent-container .hs-form-booleancheckbox-display > span {
     color: white;
+    font-family: "roboto";
+    font-size: 12px;
+    line-height: 1.5;
+    color: #fff;
   }
   textarea {
     min-width: 200px;
@@ -84,9 +89,16 @@ fieldset > div .input {
 
 .form-container {
   background-color: #172332;
-  padding: 100px 80px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  @include media-breakpoint-down(md) {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
-  label {
+  label:not(.hs-form-booleancheckbox-display) {
     display: none;
   }
 
@@ -126,7 +138,7 @@ fieldset > div .input {
   }
 }
 
-.form-text {
+p.form-text {
   font-family: "roboto";
   font-size: 18px;
   line-height: 1.61;
@@ -151,4 +163,40 @@ fieldset > div .input {
   > div {
   float: none !important;
   width: 100% !important;
+}
+
+.hs-custom-style
+  fieldset
+  input:not([type="image"]):not([type="submit"]):not([type="button"]):not([type="radio"]):not([type="checkbox"]):not([type="file"]) {
+  width: 100%;
+}
+
+.hs-form-booleancheckbox-display {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hs-form-booleancheckbox-display input {
+  min-height: inherit !important;
+}
+
+.hs-form-booleancheckbox-display span {
+  margin-bottom: 0 !important;
+  margin-left: 10px !important;
+}
+
+.inputs-list {
+  padding-left: 0;
+}
+
+.hs-custom-style
+  > div
+  > div:last-of-type
+  .hs-input:not([type="checkbox"]):not([type="radio"]),
+.hs-custom-style
+  fieldset
+  > div:last-of-type
+  .hs-input:not([type="checkbox"]):not([type="radio"]) {
+  padding: 10px;
 }

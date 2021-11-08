@@ -1,6 +1,7 @@
 .page-template-metodo {
   .jumbotron-text {
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 60px;
   }
 
   .jumbotron-link {
@@ -47,6 +48,10 @@
     margin-bottom: 40px;
   }
 
+  .proceso-text ul {
+    padding: 0 0 0 10px;
+  }
+
   .proceso-text li {
     padding: 0;
     list-style: none;
@@ -69,7 +74,6 @@
   }
 
   .proceso-text a {
-    font-weight: bold;
     line-height: 1.5;
     color: #172332;
     text-decoration: underline;

@@ -54,7 +54,7 @@
 }
 .cap-3 {
   z-index: 30;
-  transform: translateY(90px);
+  transform: translateY(50px);
   height: 91px;
   background-image: url("../images/disco_02.png");
   background-size: contain;
@@ -136,15 +136,14 @@
   align-items: flex-start;
   z-index: 100;
   position: relative;
-  margin-top: 80px;
   margin-bottom: 20px;
   @include media-breakpoint-up(md) {
-    height: 50vh;
+    min-height: 50vh;
     margin-top: 0;
     margin-bottom: 0;
   }
   h4 {
-    font-family: "presicav";
+    font-family: "henderson-sans-basic";
     font-size: 28px;
     font-weight: bold;
     line-height: 1.07;
@@ -176,7 +175,7 @@
     }
   }
   ul {
-    margin: 0 0 40px 0;
+    margin: 0 0 60px 0;
     padding: 0 0 0 10px;
   }
 }
@@ -184,7 +183,7 @@
 .cap-titles {
   position: relative;
   margin-bottom: 100px;
-  margin-top: -40px;
+  margin-top: -20px;
 }
 
 .cap-text-title,
@@ -200,9 +199,19 @@
   line-height: 1.11;
   text-align: center;
   color: #242424;
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 80px;
+  }
   @include media-breakpoint-down(md) {
     font-size: 28px;
     line-height: 1.07;
+    margin-bottom: 40px;
+  }
+}
+
+.cap-text + .cap-text {
+  @include media-breakpoint-down(lg) {
+    margin-top: 100px;
   }
 }
 
@@ -212,4 +221,13 @@
   transition: 0.4s all;
   transform: translateX(-50px);
   z-index: 1;
+}
+
+.cap-text-block img {
+  margin-bottom: 60px;
+  max-width: 100%;
+}
+
+.ring-content-text img {
+  width: 50%;
 }

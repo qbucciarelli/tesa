@@ -131,7 +131,7 @@ export const animationCaps = () => {
       "translate(0px, -70px)";
     document.querySelectorAll("div.cap-3")[0].style.opacity = "1";
     document.querySelectorAll("div.cap-3")[0].style.transform =
-      "translate(0px, 90px)";
+      "translate(0px, 50px)";
 
     document.querySelectorAll("div.cap-text-block--2")[0].style.opacity = "0";
     document.querySelectorAll("div.cap-text-block--2")[0].style.zIndex = "1";
@@ -169,7 +169,7 @@ export const animationCaps = () => {
     console.log("Step 4");
 
     document.querySelectorAll("div.cap-3")[0].style.transform =
-      "translate(0px, 30px)";
+      "translate(0px, -10px)";
 
     document.querySelectorAll("div.cap-text-block--3")[0].style.opacity = "0";
     document.querySelectorAll("div.cap-text-block--3")[0].style.zIndex = "1";

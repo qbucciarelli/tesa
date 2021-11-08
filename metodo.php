@@ -13,7 +13,7 @@ get_header();
 <?php
 $image = get_field('image')
 ?>
-<div class="section section-jumbotron" style="background-image: url('<?php echo esc_url($image['url']); ?>')">
+<div class="section section-jumbotron">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-12  col-md-8 offset-md-2">
@@ -26,6 +26,10 @@ $image = get_field('image')
 			</div>
 		</div>
 	</div>
+
+	<video autoplay loop playsinline muted poster="<?php echo esc_url($image['url']); ?>">
+		<source src="<?php the_field('video'); ?>" type="video/mp4">
+	</video>
 </div>
 
 <div class="section section-controles" id="section-controles">
@@ -112,21 +116,25 @@ $image = get_field('image')
 <div class="section section-form">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 form-container">
-				<h2 class="form-title col-12 text-left"><?php the_field('contact-title'); ?></h2>
-				<h2 class="form-text col-12 text-left"><?php the_field('contact-text'); ?></h2>
-				<!--[if lte IE 8]>
+			<div class="col-12">
+				<div class=" form-container">
+					<div class="col-md-10 offset-md-1">
+						<h2 class="form-title col-12 text-left"><?php the_field('contact-title'); ?></h2>
+						<p class="form-text col-12 text-left"><?php the_field('contact-text'); ?></p>
+						<!--[if lte IE 8]>
 							<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
 							<![endif]-->
-				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-				<script>
-					hbspt.forms.create({
-						region: "na1",
-						portalId: "20213022",
-						formId: "4a9d00ec-c7a4-41be-9609-42a780735762",
-						css: ""
-					});
-				</script>
+						<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+						<script>
+							hbspt.forms.create({
+								region: "na1",
+								portalId: "20213022",
+								formId: "4a9d00ec-c7a4-41be-9609-42a780735762",
+								css: ""
+							});
+						</script>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -141,7 +149,7 @@ $image = get_field('image')
 			</a>
 			<!-- 16:9 aspect ratio -->
 			<div id="video" class="embed-responsive embed-responsive-16by9">
-				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/LXb3EKWsInQ?rel=0&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6XRGPCdjvgk?rel=0&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 			</div>
 		</div>
 	</div>

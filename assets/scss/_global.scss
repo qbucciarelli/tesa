@@ -1,5 +1,5 @@
 main#main {
-  margin-top: 0;
+  margin-top: 70px;
   display: flex;
   flex-direction: column;
 }
@@ -37,6 +37,10 @@ body {
   &:active {
     background-color: #334f70;
   }
+  &:focus {
+    background-color: #334f70;
+    opacity: 1;
+  }
 }
 
 .btn-secondary {
@@ -62,6 +66,21 @@ body {
   &:active {
     background-color: #d9a57a;
   }
+  &:focus {
+    background-color: #d9a57a;
+    opacity: 1;
+  }
+}
+
+.btn-sm {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 10px 20px;
+}
+
+.btn {
+  box-shadow: none !important;
 }
 
 .modal-body {
@@ -123,5 +142,125 @@ body {
   &:hover {
     opacity: 1;
     cursor: pointer;
+  }
+}
+
+.anchor-menu {
+  position: fixed;
+  top: calc(150px + 50vh);
+  left: 0;
+  z-index: 10;
+  @include media-breakpoint-down(md) {
+    position: fixed;
+    top: inherit;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  .dropdown > .dropdown-toggle {
+    width: 60px;
+    height: 50px;
+    background-color: #334f70;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "roboto";
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.61;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 20;
+    &:hover {
+      cursor: pointer;
+    }
+    &:after {
+      content: none;
+    }
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+  .dropdown-menu.show {
+    transform: none !important;
+    top: 0 !important;
+    z-index: 10;
+
+    @include media-breakpoint-down(md) {
+      top: inherit !important;
+      bottom: 50px;
+    }
+  }
+  .dropdown-menu {
+    border-radius: 0;
+    border-top: 50px solid #334f70;
+    background-color: white;
+    width: 450px;
+
+    @include media-breakpoint-down(md) {
+      max-width: inherit;
+      border: none;
+    }
+  }
+  .anchor-menu-container {
+    margin: 20px !important;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    li {
+      width: 100%;
+      &:before {
+        content: none !important;
+      }
+    }
+    li + li {
+      padding: 10px 0 0 0 !important;
+      margin: 10px 0 0 0 !important;
+      border-top: solid 1px #e5e5e5;
+    }
+    .anchor-menu-link {
+      font-family: "roboto";
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 1.5;
+      color: #242424;
+      &:hover {
+        color: #334f70;
+        text-decoration: underline;
+        font-weight: bold;
+      }
+    }
+  }
+  .close {
+    position: absolute;
+    right: 20px;
+    top: -35px;
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    z-index: 10;
+  }
+  .close:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  .close:before,
+  .close:after {
+    position: absolute;
+    left: 15px;
+    content: " ";
+    height: 20px;
+    width: 2px;
+    background-color: white;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
   }
 }

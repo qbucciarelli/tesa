@@ -44,7 +44,7 @@
   h3 {
     font-family: "roboto";
     font-size: 16px;
-    font-weight: 500;
+    font-weight: bold;
     line-height: 1.5;
     color: #afafaf;
     margin-bottom: 20px;
@@ -59,6 +59,28 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
+    &.tel:before,
+    &.mail:before {
+      content: "";
+      width: 15px;
+      height: 15px;
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-right: 10px;
+    }
+    &.tel,
+    &.mail {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &.tel:before {
+      background-image: url("../images/icono_telefono.png");
+    }
+    &.mail:before {
+      background-image: url("../images/icono_mail.png");
+    }
   }
   .third_widget_area:last-child li + li {
     padding-top: 20px;
@@ -115,5 +137,30 @@
 
   .wp-block-image.size-full {
     max-width: 80px;
+  }
+}
+
+#menu-main-menu-1 {
+  li:before {
+    content: none;
+  }
+}
+
+#menu-footer-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  &:before {
+    content: none;
+  }
+  li:before {
+    content: none;
+  }
+  li + li {
+    padding: 0 0 0 10px !important;
+    margin: 0 0 0 10px !important;
+    border-left: 1px solid white;
   }
 }

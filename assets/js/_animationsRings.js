@@ -85,7 +85,7 @@ export const animationsRings = () => {
   if (distanceToTopRing <= window.pageYOffset) {
     setProgress1(75);
     setProgress2(97);
-    setProgress3(50);
+    setProgress3(100);
     runCount();
   }
 };

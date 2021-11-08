@@ -20,6 +20,10 @@
     margin: 0;
   }
 
+  #nav-below .btn {
+    margin: 0 20px;
+  }
+
   .section-articles-title {
     font-family: "presicav";
     font-size: 28px;
@@ -77,7 +81,7 @@
   }
   .card-title a {
     display: block;
-    font-family: "Roboto";
+    font-family: "henderson-sans-basic";
     font-size: 21px;
     font-weight: bold;
     line-height: 1.1;
@@ -89,6 +93,9 @@
   article:first-child {
     order: 0;
     margin-bottom: 60px;
+    .card-title {
+      margin-bottom: 20px;
+    }
     .card {
       border: none;
       background-color: #f8f9fa;
@@ -122,9 +129,12 @@
       @include media-breakpoint-down(md) {
         margin-top: 20px;
       }
+      p {
+        margin-bottom: 40px;
+      }
     }
     .link-blog {
-      @extend .btn, .btn-secondary;
+      @extend .btn, .btn-secondary, .btn-sm;
     }
   }
 }
@@ -132,9 +142,6 @@
 .blog.paged {
   article:first-child {
     min-width: inherit;
-  }
-  .section-articles {
-    margin-top: 80px;
   }
   .section-articles-title {
     display: none !important;

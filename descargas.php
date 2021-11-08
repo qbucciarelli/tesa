@@ -25,7 +25,7 @@ $image = get_field('image')
 <div class="section section-guia" id="section-guia">
 	<div class="container">
 		<div class="row">
-			<div class="col-12">
+			<div class="col-12 col-md-8 offset-md-2">
 				<h2 class="guia-main-title text-center"><?php the_field('descargas-title'); ?></h2>
 				<p class="guia-main-text text-center"><?php the_field('descargas-description'); ?></p>
 			</div>
@@ -44,7 +44,7 @@ $image = get_field('image')
 					<div class="guias col-12 col-lg-4">
 						<div class="guia-cta col-12">
 							<div class="guia-picture">
-								<img src="<?php echo get_site_url(); ?>/wp-content/themes/tesa-theme/assets/images/ebook-mockup-copy-16.jpg" alt="guia-picture" />
+								<img src="<?php the_sub_field('image'); ?>" alt="guia-picture" />
 							</div>
 							<div class="guia-title">
 								<h3><?php the_sub_field('title'); ?></h3>
@@ -78,20 +78,26 @@ $image = get_field('image')
 <div class="section section-form">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 form-container">
-				<h2 class="form-title col-12 text-left">Escríbenos</h2>
-				<!--[if lte IE 8]>
+			<div class="col-12">
+
+				<div class=" form-container">
+					<div class="col-md-10 offset-md-1">
+						<h2 class="form-title col-12 text-left"><?php the_field('contact-title'); ?></h2>
+						<p class="form-text col-12 text-left"><?php the_field('contact-text'); ?></p>
+						<!--[if lte IE 8]>
 							<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
 							<![endif]-->
-				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-				<script>
-					hbspt.forms.create({
-						region: "na1",
-						portalId: "20213022",
-						formId: "4a9d00ec-c7a4-41be-9609-42a780735762",
-						css: ""
-					});
-				</script>
+						<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+						<script>
+							hbspt.forms.create({
+								region: "na1",
+								portalId: "20213022",
+								formId: "4a9d00ec-c7a4-41be-9609-42a780735762",
+								css: ""
+							});
+						</script>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

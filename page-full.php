@@ -27,6 +27,43 @@ $image = get_field('image')
 
 <div id="post-<?php the_ID(); ?>" <?php post_class('content'); ?>>
 	<div class="section">
+		<div class="anchor-menu">
+			<div class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					+
+				</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-toggle close" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+					<ul class="anchor-menu-container">
+						<?php
+						// Check rows exists.
+						if (have_rows('anchor-menu')) :
+
+							// Loop through rows.
+							while (have_rows('anchor-menu')) : the_row();
+						?>
+
+								<li class="anchor-menu-item">
+									<a class="anchor-menu-link" href="#<?php the_sub_field('anchor-menu-id'); ?>"><?php the_sub_field('anchor-menu-text'); ?></a>
+								</li>
+						<?php
+							// End loop.
+							endwhile;
+
+						// No value.
+						else :
+						// Do something...
+						endif;
+						?>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
 		<div class="container">
 			<div class="row">
 				<div class="date-publish"><?php echo __('Fecha de publicación: ', 'tesa-theme') ?><?php the_date() ?></div>

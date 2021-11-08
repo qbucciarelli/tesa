@@ -49,6 +49,7 @@ $image = get_field('image')
 							<div class="col-12 cap-text-block">
 								<h4><?php the_sub_field('tapon-item-title'); ?></h4>
 								<?php the_sub_field('tapon-item-body'); ?>
+								<img class="col-12 col-sm-8 offset-sm-2" src="<?php the_sub_field('tapon-item-image'); ?>" alt="<?php the_sub_field('tapon-item-title'); ?>" />
 								<?php
 								$link = get_sub_field_object('tapon-item-button')['value'];
 								if ($link) :
@@ -155,9 +156,6 @@ $image = get_field('image')
 	</div>
 	<div class="container">
 		<div class="row">
-
-
-
 			<?php
 			// Check rows exists.
 			if (have_rows('beneficios-repeater')) :
@@ -168,16 +166,21 @@ $image = get_field('image')
 					<div class="ring col-12 col-md-4 d-flex flex-column">
 						<div class="ring-content">
 							<div class="ring-content-text">
-								<div class="value" akhi="<?php the_sub_field('beneficios-repeater-value'); ?>">0</div>
-								<span>€</span>
+								<?php
+								if (get_row_index() == "3") {
+									echo '<img src="' . get_site_url() . '/wp-content/themes/tesa-theme/assets/images/beneficios_03.png" alt=""/>';
+								} else {
+									echo '<div class="value" akhi=" ' . get_sub_field('beneficios-repeater-value') . '" >0</div>';
+								}
+								?>
+								<span><?php the_sub_field('beneficios-repeater-symbol'); ?></span>
 							</div>
 							<svg class="progress-ring" width="144" height="144">
 								<circle class="progress-ring__circle circle<?php echo get_row_index(); ?>" stroke="white" stroke-width="4" fill="transparent" r="70" cx="72" cy="72" />
 								<circle class="progress-ring__circle" stroke="white" stroke-width="4" fill="transparent" r="70" cx="72" cy="72" style="opacity: 0.2" />
 							</svg>
 						</div>
-						<div class="ring-text text-center"><?php the_sub_field('beneficios-repeater-text'); ?>
-						</div>
+						<div class="ring-text text-center"><?php the_sub_field('beneficios-repeater-text'); ?></div>
 					</div>
 			<?php
 				// End loop.
@@ -193,7 +196,7 @@ $image = get_field('image')
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="col-12 d-flex mt-5 flex-column text-center">
+			<div class="col-12 d-flex flex-column text-center beneficios-button">
 				<?php
 				$button = get_field('beneficios-button');
 				if ($button) :
@@ -212,20 +215,24 @@ $image = get_field('image')
 <div class="section section-form">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 form-container">
-				<h2 class="form-title col-12 text-left"><?php the_field('contact-title') ?></h2>
-				<!--[if lte IE 8]>
+			<div class="col-12">
+				<div class=" form-container">
+					<div class="col-12 col-md-10 offset-md-1">
+						<h2 class="form-title col-12 text-left"><?php the_field('contact-title') ?></h2>
+						<!--[if lte IE 8]>
 							<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
 							<![endif]-->
-				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-				<script>
-					hbspt.forms.create({
-						region: "na1",
-						portalId: "20213022",
-						formId: "4a9d00ec-c7a4-41be-9609-42a780735762",
-						css: ""
-					});
-				</script>
+						<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+						<script>
+							hbspt.forms.create({
+								region: "na1",
+								portalId: "20213022",
+								formId: "4a9d00ec-c7a4-41be-9609-42a780735762",
+								css: ""
+							});
+						</script>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

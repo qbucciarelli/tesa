@@ -43,7 +43,7 @@ $image = get_field('image')
 					<div class="col-12 col-lg-6">
 						<!-- 16:9 aspect ratio -->
 						<div class="embed-responsive embed-responsive-16by9">
-							<iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95780.46585423182!2d2.070149645558153!3d41.39277549745888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49816718e30e5%3A0x44b0fb3d4f47660a!2sBarcelone!5e0!3m2!1sfr!2ses!4v1633946191154!5m2!1sfr!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+							<iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5936.83121080249!2d3.158928!3d41.92692!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ba54681417e423%3A0x3472ed596c99c8d1!2sCarrer%20del%20Gas%2C%2020%2C%2017200%20Palafrugell%2C%20Girona!5e0!3m2!1ses!2ses!4v1636058428716!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 						</div>
 					</div>
 				</div>
@@ -55,27 +55,32 @@ $image = get_field('image')
 <div class="section section-form">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 form-container">
-				<h2 class="form-title col-12 text-left"><?php the_field('contacto-form-title'); ?></h2>
-				<!--[if lte IE 8]>
-							<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-							<![endif]-->
-				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-				<script>
-					hbspt.forms.create({
-						region: "na1",
-						portalId: "20213022",
-						formId: "4a9d00ec-c7a4-41be-9609-42a780735762",
-						css: ""
-					});
-				</script>
+			<div class="col-12">
+				<div class=" form-container">
+					<div class="col-md-10 offset-md-1">
+
+						<h2 class="form-title col-12 text-left"><?php the_field('contacto-form-title'); ?></h2>
+						<!--[if lte IE 8]>
+						<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+						<![endif]-->
+						<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+						<script>
+							hbspt.forms.create({
+								region: "na1",
+								portalId: "20213022",
+								formId: "4a9d00ec-c7a4-41be-9609-42a780735762",
+								css: ""
+							});
+						</script>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
 
-<div class="section">
+<div class="section section-descargas">
 	<div class="container">
 		<div class="row">
 

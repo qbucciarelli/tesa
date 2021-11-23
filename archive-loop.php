@@ -4,6 +4,16 @@
  * The template for displaying the archive loop.
  */
 
+
+
+
+if (is_home() || is_front_page()) {
+	global $query_string;
+	parse_str($query_string, $args);
+	$args['posts_per_page'] = 13;
+	query_posts($args);
+}
+
 if (have_posts()) :
 ?>
 	<div class="articles">
@@ -25,4 +35,8 @@ endif;
 
 wp_reset_postdata();
 
-tesa_theme_content_nav('nav-below');
+?>
+<div class="pagination-bar">
+	<?php the_posts_pagination(); ?>
+</div>
+<?php

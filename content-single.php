@@ -7,7 +7,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<a class="back-to-blog" href="<?php echo get_post_type_archive_link('post'); ?>"><?php echo esc_html__('< Volver al blog', 'tesa-theme') ?></a>
+	<span>
+		&lt; <a class="back-to-blog" href="<?php echo get_post_type_archive_link('post'); ?>"><?php echo esc_html__('Volver al blog', 'tesa-theme') ?></a>
+	</span>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- /.entry-header -->

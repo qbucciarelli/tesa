@@ -1,14 +1,18 @@
 .page-template-page-full,
+.page-template-default.page,
 .post-template-default.single {
   .section-jumbotron {
     height: 50vh;
+    .container-fluid {
+      height: 50vh;
+    }
   }
   .jumbotron {
     height: 50vh;
   }
   .jumbotron-title {
     margin-top: auto;
-    margin-bottom: 0;
+    margin-bottom: auto;
   }
   article,
   .content {
@@ -28,6 +32,10 @@
     }
     .date-publish {
       margin-top: 10px;
+    }
+
+    div > ul {
+      padding: 0;
     }
 
     div > ul > li {
@@ -110,6 +118,7 @@
       transition: 0.2s all;
       &:hover {
         cursor: pointer;
+        opacity: 0.8;
       }
     }
     p {
@@ -129,6 +138,7 @@
       font-size: 14px;
       line-height: 1.5;
       color: #242424;
+      text-align: left;
     }
     .wp-block-image {
       margin-top: 40px;
@@ -141,5 +151,53 @@
   }
   #footer {
     margin-top: 0;
+  }
+}
+
+.page-template-default.page {
+  .content {
+    margin: 100px 0;
+
+    h1.entry-title {
+      font-family: "presicav";
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 1.07;
+      color: #242424;
+    }
+    ul {
+      padding: 0;
+    }
+    ul > li {
+      padding: 0;
+      list-style: none;
+      position: relative;
+      align-items: center;
+      + li {
+        margin: 20px 0 0 0;
+      }
+      strong:first-child {
+        display: inline;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.61;
+        color: #242424;
+        + p {
+          margin-top: 15px;
+        }
+      }
+      &:before {
+        background-color: #334f70;
+        content: "";
+        float: left;
+        height: 10px;
+        position: relative;
+        width: 10px;
+        top: 7px;
+        left: 0;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+    }
   }
 }

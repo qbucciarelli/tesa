@@ -257,6 +257,20 @@ body.admin-bar {
   #comments-title {
     margin: $grid-gutter-width 0;
   }
+
+  .entry-content a {
+    font-family: "roboto";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #334f70;
+    text-decoration: underline;
+    transition: 0.2s all;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
 }
 
 #comments {

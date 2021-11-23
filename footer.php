@@ -10,7 +10,8 @@ if (is_single() || is_archive()) :
 endif;
 ?>
 
-</main><!-- /#main -->
+</main>
+<!-- /#main -->
 <footer id="footer">
 	<div class="container">
 		<div class="row">
@@ -102,11 +103,17 @@ endif;
 				?>
 
 			</div>
+		</div>
+	</div>
 </footer><!-- /#footer -->
 </div><!-- /#wrapper -->
 <?php
 wp_footer();
 ?>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+	AOS.init();
+</script>
 </body>
 
 </html>

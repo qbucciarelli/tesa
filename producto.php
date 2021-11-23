@@ -14,8 +14,8 @@ $image = get_field('image')
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-12  col-md-8 offset-md-2">
-				<div class="jumbotron">
-					<div class="jumbotron-title text-center"><?php the_field('title'); ?></div>
+				<div class="jumbotron" data-aos="fade-up">
+					<h1 class="jumbotron-title text-left text-md-center"><?php the_field('title'); ?></h1>
 				</div>
 			</div>
 		</div>
@@ -26,17 +26,17 @@ $image = get_field('image')
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-md-10 offset-0 offset-md-1">
-				<h1>
+				<h2 class="text-left text-md-center" data-aos="fade-up">
 					<?php the_field('mt-title'); ?>
-				</h1>
+				</h2>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-12 col-md-5">
+			<div class="col-12 col-md-5" data-aos="fade-up">
 				<?php the_field('mt-text'); ?>
 			</div>
-			<div class="col-12 col-md-6 offset-0 offset-md-1">
+			<div class="col-12 col-md-6 offset-0 offset-md-1" data-aos="fade-up">
 				<img src="<?php echo esc_url(get_field('mt-image')['url']); ?>" alt="<?php echo esc_url(get_field('mt-image')['alt']); ?>" />
 			</div>
 		</div>
@@ -47,8 +47,10 @@ $image = get_field('image')
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-md-7 offset-0 offset-md-5">
-				<h2><?php the_field('corchos-title'); ?></h2>
-				<?php the_field('corchos-text'); ?>
+				<h2 data-aos="fade-up"><?php the_field('corchos-title'); ?></h2>
+				<div data-aos="fade-up">
+					<?php the_field('corchos-text'); ?>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -58,7 +60,7 @@ $image = get_field('image')
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<h2><?php the_field('pareja-title'); ?></h2>
+				<h2 class="text-left text-md-center"><?php the_field('pareja-title'); ?></h2>
 			</div>
 		</div>
 
@@ -72,7 +74,7 @@ $image = get_field('image')
 			?>
 					<?php $active = (1 == get_row_index()) ? 'active' : null;
 					?>
-					<li class="col-12 col-md-2 d-flex"><a data-toggle="tab" href="#tab<?php echo get_row_index(); ?>" class="<?php echo $active; ?>"><?php the_sub_field('pareja-repeater-section'); ?></a></li>
+					<li class="col-6 col-md-2 d-flex"><a data-toggle="tab" href="#tab<?php echo get_row_index(); ?>" class="<?php echo $active; ?>"><?php the_sub_field('pareja-repeater-section'); ?></a></li>
 			<?php
 				// End loop.
 				endwhile;
@@ -99,13 +101,13 @@ $image = get_field('image')
 			<?php $currentTab = get_row_index();
 			?>
 			<div id="tab<?php echo get_row_index() ?>" class="tab-pane fade row <?php echo $activeTab ?>">
-				<div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
+				<div class="col-6 offset-3 offset-md-0 col-md-3 d-flex justify-content-center align-items-center">
 					<img src="<?php the_sub_field('pareja-repeater-image'); ?>" alt="<?php the_sub_field('pareja-repeater-title'); ?>" />
 				</div>
 				<div class="col-12 offset-0 offset-md-1 col-md-7">
 					<h3><?php the_sub_field('pareja-repeater-title'); ?></h3>
-					<p><?php the_sub_field('pareja-repeater-text'); ?></p>
-					<div class="accordion" id="accordionExample">
+					<div><?php the_sub_field('pareja-repeater-text'); ?></div>
+					<div class="accordion" id="accordionExample<?php echo $currentTab ?>">
 						<?php
 						// Check rows exists.
 						if (have_rows('pareja-repeater-repeater')) :
@@ -114,7 +116,7 @@ $image = get_field('image')
 							while (have_rows('pareja-repeater-repeater')) : the_row();
 						?>
 								<div class="card">
-									<div class="card-header" id="headingOne">
+									<div class="card-header" id="heading<?php echo $currentTab . get_row_index() ?>">
 										<h5 class="mb-0">
 											<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse<?php echo $currentTab ?><?php echo get_row_index() ?>" aria-expanded="false" aria-controls="collapse<?php echo $currentTab ?><?php echo get_row_index() ?>">
 												<?php the_sub_field('pareja-repeater-repeater-title') ?>
@@ -122,7 +124,8 @@ $image = get_field('image')
 										</h5>
 									</div>
 
-									<div id="collapse<?php echo $currentTab ?><?php echo get_row_index() ?>" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+									<div id="collapse<?php echo $currentTab ?><?php echo get_row_index() ?>" class="collapse" aria-labelledby="heading<?php echo $currentTab . get_row_index() ?>" data-parent="#accordionExample<?php echo $currentTab ?>">
+										<hr />
 										<div class="card-body">
 											<?php the_sub_field('pareja-repeater-repeater-text') ?>
 										</div>
@@ -156,7 +159,7 @@ $image = get_field('image')
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<h2><?php the_field('cualidad-title') ?></h2>
+				<h2 class="text-left text-md-center"><?php the_field('cualidad-title') ?></h2>
 			</div>
 		</div>
 		<div class="row">
@@ -167,7 +170,7 @@ $image = get_field('image')
 				// Loop through rows.
 				while (have_rows('cualidad-repeater')) : the_row();
 			?>
-					<div class="col-12 col-md-4">
+					<div class="col-12 col-md-4" data-aos="fade-up">
 						<img src="<?php the_sub_field('cualidad-repeater-image') ?>" alt="<?php the_sub_field('cualidad-repeater-title') ?>" />
 						<h4><?php the_sub_field('cualidad-repeater-title') ?></h4>
 						<p><?php the_sub_field('cualidad-repeater-text') ?></p>
@@ -185,17 +188,17 @@ $image = get_field('image')
 	</div>
 </div>
 
-<div class="section section-metodologia" id="section-mt">
+<div class="section section-metodologia">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 col-md-10 offset-0 offset-md-1">
-				<h1><?php the_field('metodologia-title') ?></h1>
+			<div class="col-12 col-md-10 offset-0 offset-md-1" data-aos="fade-up">
+				<h2 class="text-left text-md-center"><?php the_field('metodologia-title') ?></h2>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-12 col-md-5">
-				<img src="<?php the_field('metodologia-image') ?>" />
+			<div class="col-12 col-md-5" data-aos="fade-right">
+				<img src="<?php the_field('metodologia-image') ?>" alt="<?php the_field('metodologia-title') ?>" />
 			</div>
 			<div class="col-12 col-md-6 offset-0 offset-md-1">
 				<?php the_field('metodologia-text') ?>
@@ -224,7 +227,10 @@ $image = get_field('image')
 
 							$activeProceso = (1 == get_row_index()) ? 'active' : null;
 					?>
-							<li class="proceso-listlitem <?php echo $activeProceso ?>"><span><?php echo get_row_index() ?></span><?php the_sub_field('proceso-repeater-title') ?></li>
+							<li class="proceso-listlitem <?php echo $activeProceso ?>"><span><?php echo get_row_index() ?></span>
+								<div><?php the_sub_field('proceso-repeater-title') ?></div>
+								<img src="<?php the_sub_field('proceso-repeater-image') ?>" alt="<?php the_sub_field('proceso-repeater-title') ?>" />
+							</li>
 					<?php
 						// End loop.
 						endwhile;
@@ -236,7 +242,7 @@ $image = get_field('image')
 					?>
 				</ul>
 			</div>
-			<div class="col-12 col-md-5 offset-0 offset-md-1 proceso-caroussel">
+			<div class="col-12 col-md-5 offset-0 offset-md-1 proceso-caroussel" data-aos="fade-left">
 				<?php
 				// Check rows exists.
 				if (have_rows('proceso-repeater')) :
@@ -266,6 +272,11 @@ $image = get_field('image')
 <div class="section section-client">
 	<div class="container">
 		<div class="row">
+			<div class="col-12">
+				<h2><?php the_field('client-title') ?></h2>
+			</div>
+		</div>
+		<div class="row">
 			<?php
 			// Check rows exists.
 			if (have_rows('client-repeater')) :
@@ -274,10 +285,10 @@ $image = get_field('image')
 				while (have_rows('client-repeater')) : the_row();
 			?>
 
-					<div class="client-item col-12 col-sm-4 col-md-2">
+					<div class="client-item col-6 col-sm-4 col-md-2">
 						<div class="client-item-img">
 							<a href="<?php the_sub_field('client-repeater-url') ?>">
-								<img src="<?php the_sub_field('client-repeater-image') ?>" />
+								<img src="<?php the_sub_field('client-repeater-image') ?>" alt="client" />
 							</a>
 						</div>
 					</div>
@@ -309,8 +320,8 @@ $image = get_field('image')
 						<script>
 							hbspt.forms.create({
 								region: "na1",
-								portalId: "20213022",
-								formId: "4a9d00ec-c7a4-41be-9609-42a780735762",
+								portalId: "<?php the_field('portal-id'); ?>",
+								formId: "<?php the_field('form-id'); ?>",
 								css: ""
 							});
 						</script>

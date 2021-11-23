@@ -26,6 +26,9 @@
         }
       }
     }
+    @include media-breakpoint-down(md) {
+      opacity: 0.5;
+    }
   }
   > .container:first-child {
     padding-top: 60px;
@@ -59,6 +62,11 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
     &.tel:before,
     &.mail:before {
       content: "";
@@ -74,6 +82,11 @@
       display: inline-flex;
       justify-content: center;
       align-items: center;
+      @include media-breakpoint-down(md) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
     }
     &.tel:before {
       background-image: url("../images/icono_telefono.png");
@@ -124,8 +137,8 @@
       flex-direction: row;
       flex-wrap: wrap;
       li + li {
-        padding-left: 10px;
-        margin-left: 10px;
+        padding-left: 15px;
+        margin-left: 15px;
         border-left: 1px solid white;
       }
     }

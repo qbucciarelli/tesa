@@ -16,15 +16,15 @@ $image = get_field('image')
 		<div class="row">
 			<div class="col-12 col-md-8 offset-md-2">
 				<div class="jumbotron">
-					<div class="jumbotron-logo">
+					<div class="jumbotron-logo" data-aos="fade-up">
 						<?php
 						$logo = get_field('logo');
 						if (!empty($logo)) : ?>
-							<img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" />
+							<img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" data-aos="fade-up" />
 						<?php endif; ?>
 					</div>
-					<div class="jumbotron-title text-center"><?php the_field('title'); ?></div>
-					<a class="jumbotron-down-link smooth-link" href="#section-animation"></a>
+					<h1 class="jumbotron-title text-center" data-aos="fade-up"><?php the_field('title'); ?></h1>
+					<a class="jumbotron-down-link smooth-link animate__animated animate__pulse" href="#section-animation"></a>
 				</div>
 			</div>
 		</div>
@@ -47,7 +47,7 @@ $image = get_field('image')
 				?>
 						<div class="cap-text">
 							<div class="col-12 cap-text-block">
-								<h4><?php the_sub_field('tapon-item-title'); ?></h4>
+								<h3><?php the_sub_field('tapon-item-title'); ?></h3>
 								<?php the_sub_field('tapon-item-body'); ?>
 								<img class="col-12 col-sm-8 offset-sm-2" src="<?php the_sub_field('tapon-item-image'); ?>" alt="<?php the_sub_field('tapon-item-title'); ?>" />
 								<?php
@@ -76,7 +76,7 @@ $image = get_field('image')
 		<div class="cap-titles">
 			<div class="container">
 				<div class="row">
-					<div class="col-12 cap-text-main-title">
+					<div data-aos="fade-up" class="col-12 cap-text-main-title">
 						<h2>Descubre el tapón TESA</h2>
 					</div>
 				</div>
@@ -95,7 +95,7 @@ $image = get_field('image')
 						while (have_rows('tapon-repeater')) : the_row();
 					?>
 							<div class="col-5 cap-text-block cap-text-block--<?php echo get_row_index(); ?>">
-								<h4><?php the_sub_field('tapon-item-title'); ?></h4>
+								<h3><?php the_sub_field('tapon-item-title'); ?></h3>
 								<?php the_sub_field('tapon-item-body'); ?>
 								<?php
 								$link = get_sub_field_object('tapon-item-button')['value'];
@@ -138,11 +138,7 @@ $image = get_field('image')
 				</div>
 			</div>
 		</div>
-
-
-
 	</div>
-</div>
 </div>
 
 
@@ -151,7 +147,7 @@ $image = get_field('image')
 
 	<div class="container">
 		<div class="row">
-			<h2 class="ring-title col-12 text-center"><?php the_field('beneficios-title'); ?></h2>
+			<h2 data-aos="fade-up" class="ring-title col-12 text-center"><?php the_field('beneficios-title'); ?></h2>
 		</div>
 	</div>
 	<div class="container">
@@ -226,8 +222,8 @@ $image = get_field('image')
 						<script>
 							hbspt.forms.create({
 								region: "na1",
-								portalId: "20213022",
-								formId: "4a9d00ec-c7a4-41be-9609-42a780735762",
+								portalId: "<?php the_field('portal-id'); ?>",
+								formId: "<?php the_field('form-id'); ?>",
 								css: ""
 							});
 						</script>
@@ -241,7 +237,7 @@ $image = get_field('image')
 <div class="section">
 	<div class="container">
 		<div class="row">
-			<h2 class="testimonios-title col-12 text-center"><?php the_field('testimonios-title') ?></h2>
+			<h2 class="testimonios-title col-12 text-center" data-aos="fade-up"><?php the_field('testimonios-title') ?></h2>
 		</div>
 	</div>
 	<div class="container">
@@ -282,8 +278,6 @@ $image = get_field('image')
 			?>
 		</div>
 	</div>
-</div>
-
 </div>
 
 

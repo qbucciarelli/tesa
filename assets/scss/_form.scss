@@ -13,6 +13,24 @@
     z-index: 1;
   }
 
+  select {
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 5px;
+    height: 20px;
+    background: url("../images/flechas_desplegable.png") no-repeat right
+      transparent;
+    -webkit-appearance: none;
+    background-position-x: calc(100% - 10px);
+    background-size: 15px;
+
+    @include media-breakpoint-down(md) {
+      padding-right: 30px !important;
+    }
+  }
+
   input,
   select,
   textarea {

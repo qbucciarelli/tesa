@@ -16,9 +16,9 @@ $image = get_field('image')
 <div class="section section-jumbotron">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-12  col-md-8 offset-md-2">
+			<div class="col-12  col-md-8 offset-md-2" data-aos="fade-up">
 				<div class="jumbotron">
-					<div class="jumbotron-title v-centered text-left text-md-center"><?php the_field('title'); ?></div>
+					<h1 class="jumbotron-title v-centered text-left text-md-center"><?php the_field('title'); ?></h1>
 					<div class="jumbotron-text text-left text-md-center"><?php the_field('text'); ?></div>
 					<a class="jumbotron-link modal-link text-left text-md-center modal-open"><?php the_field('button-video'); ?></a>
 					<a class="jumbotron-down-link smooth-link" href="#section-controles"></a>
@@ -53,7 +53,7 @@ $image = get_field('image')
 						while (have_rows('controles-repeater')) : the_row();
 					?>
 
-							<li class="controles-list-item">
+							<li class="controles-list-item" data-aos="fade-up">
 								<span class="controle-list-item-title"><?php the_sub_field('controles-repeater-title'); ?></span>
 								<?php the_sub_field('controles-repeater-body'); ?>
 							</li>
@@ -91,13 +91,13 @@ $image = get_field('image')
 		?>
 
 				<div class="row proceso-row justify-content-between">
-					<div class="col-12 col-md-6 text">
-						<h3 class="proceso-item-title text-left"><span class="proceso-item-title-number"><?php echo get_row_index(); ?></span><?php the_sub_field('proceso-repeater-title'); ?></h2>
-							<div class="proceso-text text-left">
-								<?php the_sub_field('proceso-repeater-body'); ?>
-							</div>
+					<div class="col-12 col-md-6 text" data-aos="fade-<?php print (get_row_index() % 2) ? "right" : "left"; ?>">
+						<h3 class="proceso-item-title text-left"><span class="proceso-item-title-number"><?php echo get_row_index(); ?></span><?php the_sub_field('proceso-repeater-title'); ?></h3>
+						<div class="proceso-text text-left">
+							<?php the_sub_field('proceso-repeater-body'); ?>
+						</div>
 					</div>
-					<div class="col-12 col-md-5 img">
+					<div class="col-12 col-md-5 img" data-aos="fade-<?php print (get_row_index() % 2) ? "left" : "right"; ?>">
 						<img src="<?php the_sub_field('proceso-repeater-image') ?>" alt="<?php the_sub_field('proceso-repeater-title'); ?>" />
 					</div>
 				</div>
@@ -128,8 +128,8 @@ $image = get_field('image')
 						<script>
 							hbspt.forms.create({
 								region: "na1",
-								portalId: "20213022",
-								formId: "4a9d00ec-c7a4-41be-9609-42a780735762",
+								portalId: "<?php the_field('portal-id'); ?>",
+								formId: "<?php the_field('form-id'); ?>",
 								css: ""
 							});
 						</script>
@@ -141,7 +141,7 @@ $image = get_field('image')
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
 		<div class="modal-content">
 			<a class="close modal-close">
@@ -149,7 +149,7 @@ $image = get_field('image')
 			</a>
 			<!-- 16:9 aspect ratio -->
 			<div id="video" class="embed-responsive embed-responsive-16by9">
-				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6XRGPCdjvgk?rel=0&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6XRGPCdjvgk?rel=0&enablejsapi=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 			</div>
 		</div>
 	</div>

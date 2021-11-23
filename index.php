@@ -15,7 +15,7 @@ $image = get_field('image', 17)
 		<div class="row">
 			<div class="col-12  col-md-8 offset-md-2">
 				<div class="jumbotron">
-					<div class="jumbotron-title text-left text-md-center"><?php echo get_field('title', 17); ?></div>
+					<h1 class="jumbotron-title text-left text-md-center" data-aos="fade-up"><?php echo get_field('title', 17); ?></h1>
 				</div>
 			</div>
 		</div>
@@ -25,13 +25,13 @@ $image = get_field('image', 17)
 <?php
 $page_id = get_option('page_for_posts');
 ?>
-<section class="section-articles">
+<section class="section-articles" data-aos="fade-up">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
 				<div class="section-articles-title d-flex justify-content-center">
-					<div class="col-10">
-						<?php echo get_field('blog-title', 17); ?></div>
+					<h2 class="col-12 col-md-10 text-left text-md-center">
+						<?php echo get_field('blog-title', 17); ?></h2>
 				</div>
 			</div>
 		</div>

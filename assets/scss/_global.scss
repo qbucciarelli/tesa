@@ -145,11 +145,23 @@ body {
   }
 }
 
+.container,
+.container-fluid {
+  @include media-breakpoint-down(sm) {
+    padding: 0 20px;
+  }
+}
+
 .anchor-menu {
   position: fixed;
-  top: calc(150px + 50vh);
+  top: 13%;
   left: 0;
   z-index: 10;
+  @include media-breakpoint-up(md) {
+    @media screen and (max-height: 768px) {
+      top: 70px;
+    }
+  }
   @include media-breakpoint-down(md) {
     position: fixed;
     top: inherit;
@@ -191,6 +203,7 @@ body {
     @include media-breakpoint-down(md) {
       top: inherit !important;
       bottom: 50px;
+      width: 100%;
     }
   }
   .dropdown-menu {
@@ -198,6 +211,7 @@ body {
     border-top: 50px solid #334f70;
     background-color: white;
     width: 450px;
+    padding: 0;
 
     @include media-breakpoint-down(md) {
       max-width: inherit;
@@ -211,6 +225,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    @include media-breakpoint-up(md) {
+      @media screen and (max-height: 768px) {
+        height: calc(100vh - 160px);
+        justify-content: flex-start;
+        overflow: scroll;
+      }
+    }
     li {
       width: 100%;
       &:before {

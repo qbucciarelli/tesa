@@ -40,11 +40,6 @@ header.header {
   padding-bottom: 0;
 }
 
-/*Remove when WPML active*/
-.navbar-dark .navbar-nav .menu-item:nth-last-child(2) .nav-link {
-  padding-right: 0;
-}
-
 .navbar-dark .navbar-nav .nav-link {
   color: white;
   font-size: 14px;
@@ -67,10 +62,6 @@ header.header {
 .dropdown-menu[data-bs-popper] {
   left: inherit;
   right: 0;
-}
-
-.wpml-ls-item {
-  display: none;
 }
 
 .navbar-dark .navbar-nav .nav-link {

@@ -58,6 +58,18 @@
     line-height: 1.5;
     color: #fff;
   }
+  .legal-consent-container a {
+    font-family: "roboto";
+    font-size: 16px;
+    line-height: 1.5;
+    color: #b67f5f;
+    text-decoration: underline;
+    transition: 0.2s all;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
   textarea {
     min-width: 200px;
   }

@@ -24,6 +24,41 @@ $image = get_field('image')
 	</div>
 </div>
 
+<div class="section section-porque" data-aos="fade-up">
+	<div class="container">
+		<div class="row">
+			<div class="col-12" data-aos="fade-up">
+				<h2 class="porque-title text-left text-md-center"><?php the_field('contacto-porque-title'); ?></h2>
+			</div>
+		</div>
+		<ul class="contacto-porque-container row">
+			<?php
+			// Check rows exists.
+			if (have_rows('contacto-porque-repeater')) :
+
+				// Loop through rows.
+				while (have_rows('contacto-porque-repeater')) : the_row();
+			?>
+					<li class="contacto-porque-text col-12 col-lg-6">
+						<?php the_sub_field('contacto-porque-text'); ?>
+					</li>
+			<?php
+				// End loop.
+				endwhile;
+
+			// No value.
+			else :
+			// Do something...
+			endif;
+			?>
+		</ul>
+
+
+
+	</div>
+</div>
+</div>
+
 <div class="section section-informacion" id="section-informacion">
 	<div class="container">
 		<div class="row">
@@ -43,7 +78,7 @@ $image = get_field('image')
 					<div class="col-12 col-lg-6">
 						<!-- 16:9 aspect ratio -->
 						<div class="embed-responsive embed-responsive-16by9">
-							<iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.41542997062!2d3.1567388158744514!3d41.92692377033563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ba54681417e423%3A0x3472ed596c99c8d1!2sCarrer%20del%20Gas%2C%2020%2C%2017200%20Palafrugell%2C%20Girona!5e0!3m2!1sfr!2ses!4v1637163671600!5m2!1sfr!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+							<iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.41542997062!2d3.1567388158744514!3d41.92692377033563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ba54681417e423%3A0x3472ed596c99c8d1!2sCarrer%20del%20Gas%2C%2020%2C%2017200%20Palafrugell%2C%20Girona!5e0!3m2!1ses!2ses!4v1637163671600!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 						</div>
 					</div>
 				</div>

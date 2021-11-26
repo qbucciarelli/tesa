@@ -54,13 +54,19 @@ $image = get_field('image')
 								<?php the_sub_field('text'); ?>
 							</div>
 							<?php
-							$link = get_sub_field_object('link')['value'];
-							if ($link) :
-								$link_url = $link['url'];
-								$link_title = $link['title'];
+							if (get_sub_field('link') != null) :
 							?>
-								<a href="<?php echo esc_url($link_url); ?>" class="guia-link" download><?php esc_html_e('Descargar', 'tesa-theme'); ?></a>
-							<?php endif; ?>
+								<a href="<?php the_sub_field('link'); ?>" class="guia-link" target="_blank"><?php esc_html_e('Descargar', 'tesa-theme'); ?></a>
+							<?php
+							endif;
+							?>
+							<?php
+							if (get_sub_field('url') != null) :
+							?>
+								<a href="<?php the_sub_field('url'); ?>" class="guia-link" target="_blank"><?php esc_html_e('Descargar', 'tesa-theme'); ?></a>
+							<?php
+							endif;
+							?>
 						</div>
 					</div>
 			<?php

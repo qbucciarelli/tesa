@@ -116,6 +116,21 @@
     }
   }
 
+  .rrss-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+    li + li {
+      padding-top: 0 !important;
+      padding-left: 10px;
+    }
+    img {
+      max-width: 30px;
+      height: auto;
+    }
+  }
+
   .footer_widget_area {
     align-items: center;
     p,

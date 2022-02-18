@@ -97,9 +97,12 @@ $image = get_field('image')
 							<?php the_sub_field('proceso-repeater-body'); ?>
 						</div>
 					</div>
-					<div class="col-12 col-md-5 img" data-aos="fade-<?php print (get_row_index() % 2) ? "left" : "right"; ?>">
-						<img src="<?php the_sub_field('proceso-repeater-image') ?>" alt="<?php the_sub_field('proceso-repeater-title'); ?>" />
-					</div>
+					<?php $proceso_repeater_image = get_sub_field('proceso-repeater-image');
+					if (!empty($proceso_repeater_image)) : ?>
+						<div class="col-12 col-md-5 img" data-aos="fade-<?php print (get_row_index() % 2) ? "left" : "right"; ?>">
+							<img src="<?php echo $proceso_repeater_image['url'] ?>" alt="<?php echo $proceso_repeater_image['alt'] ?>" />
+						</div>
+					<?php endif; ?>
 				</div>
 		<?php
 			// End loop.

@@ -45,7 +45,12 @@ $image = get_field('image')
 					<div class="guias col-12 col-lg-4" data-aos="fade-up">
 						<div class="guia-cta col-12">
 							<div class="guia-picture">
-								<img src="<?php the_sub_field('image'); ?>" alt="guia-picture" />
+
+								<?php $guia_picture = get_sub_field('image');
+								if (!empty($guia_picture)) : ?>
+									<img src="<?php echo $guia_picture['url'] ?>" alt="<?php echo $guia_picture['alt'] ?>" />
+								<?php endif; ?>
+
 							</div>
 							<div class="guia-title">
 								<h3><?php the_sub_field('title'); ?></h3>

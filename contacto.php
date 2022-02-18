@@ -129,7 +129,12 @@ $image = get_field('image')
 					<div class="descargas col-12 col-lg-4">
 						<div class="descargas-header col-12">
 							<div class="descargas-picture">
-								<img src="<?php the_sub_field('contacto-repeater-image'); ?>" alt="<?php the_sub_field('contacto-repeater-title'); ?>">
+
+								<?php $proceso_repeater_image = get_sub_field('contacto-repeater-image');
+								if (!empty($proceso_repeater_image)) : ?>
+									<img src="<?php echo $proceso_repeater_image['url'] ?>" alt="<?php echo $proceso_repeater_image['alt'] ?>" />
+								<?php endif; ?>
+
 							</div>
 							<div class="descargas-title">
 								<h3><?php the_sub_field('contacto-repeater-title'); ?></h3>

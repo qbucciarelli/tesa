@@ -102,7 +102,12 @@ $image = get_field('image')
 			?>
 			<div id="tab<?php echo get_row_index() ?>" class="tab-pane fade row <?php echo $activeTab ?>">
 				<div class="col-6 offset-3 offset-md-0 col-md-3 d-flex justify-content-center align-items-center">
-					<img src="<?php the_sub_field('pareja-repeater-image'); ?>" alt="<?php the_sub_field('pareja-repeater-title'); ?>" />
+
+					<?php $pareja_repeater_image = get_sub_field('pareja-repeater-image');
+					if (!empty($pareja_repeater_image)) : ?>
+						<img src="<?php echo $pareja_repeater_image['url'] ?>" alt="<?php echo $pareja_repeater_image['alt'] ?>" />
+					<?php endif; ?>
+
 				</div>
 				<div class="col-12 offset-0 offset-md-1 col-md-7">
 					<h3><?php the_sub_field('pareja-repeater-title'); ?></h3>
@@ -171,7 +176,13 @@ $image = get_field('image')
 				while (have_rows('cualidad-repeater')) : the_row();
 			?>
 					<div class="col-12 col-md-4" data-aos="fade-up">
-						<img src="<?php the_sub_field('cualidad-repeater-image') ?>" alt="<?php the_sub_field('cualidad-repeater-title') ?>" />
+
+						<?php $cualidad_repeater_image = get_sub_field('cualidad-repeater-image');
+						if (!empty($cualidad_repeater_image)) : ?>
+							<img src="<?php echo $cualidad_repeater_image['url'] ?>" alt="<?php echo $cualidad_repeater_image['alt'] ?>" />
+						<?php endif; ?>
+
+
 						<h4><?php the_sub_field('cualidad-repeater-title') ?></h4>
 						<p><?php the_sub_field('cualidad-repeater-text') ?></p>
 					</div>
@@ -198,7 +209,7 @@ $image = get_field('image')
 
 		<div class="row">
 			<div class="col-12 col-md-5" data-aos="fade-right">
-				<img src="<?php the_field('metodologia-image') ?>" alt="<?php the_field('metodologia-title') ?>" />
+				<img src="<?php the_field('metodologia-image')['url'] ?>" alt="<?php the_field('metodologia-title')['alt'] ?>" />
 			</div>
 			<div class="col-12 col-md-6 offset-0 offset-md-1">
 				<?php the_field('metodologia-text') ?>
@@ -229,7 +240,12 @@ $image = get_field('image')
 					?>
 							<li class="proceso-listlitem <?php echo $activeProceso ?>"><span><?php echo get_row_index() ?></span>
 								<div><?php the_sub_field('proceso-repeater-title') ?></div>
-								<img src="<?php the_sub_field('proceso-repeater-image') ?>" alt="<?php the_sub_field('proceso-repeater-title') ?>" />
+
+								<?php $proceso_repeater_image = get_sub_field('proceso-repeater-image');
+								if (!empty($proceso_repeater_image)) : ?>
+									<img src="<?php echo $proceso_repeater_image['url'] ?>" alt="<?php echo $proceso_repeater_image['alt'] ?>" />
+								<?php endif; ?>
+
 							</li>
 					<?php
 						// End loop.
@@ -253,7 +269,12 @@ $image = get_field('image')
 						$activeProcesoImg = (1 == get_row_index()) ? 'active' : null;
 				?>
 						<div class="proceso-image <?php echo $activeProcesoImg ?>" id="<?php echo get_row_index() ?>">
-							<img src="<?php the_sub_field('proceso-repeater-image') ?>" alt="<?php the_sub_field('proceso-repeater-title') ?>" />
+
+							<?php $proceso_repeater_image = get_sub_field('proceso-repeater-image');
+							if (!empty($proceso_repeater_image)) : ?>
+								<img src="<?php echo $proceso_repeater_image['url'] ?>" alt="<?php echo $proceso_repeater_image['alt'] ?>" />
+							<?php endif; ?>
+
 						</div>
 				<?php
 					// End loop.
@@ -288,7 +309,12 @@ $image = get_field('image')
 					<div class="client-item col-6 col-sm-4 col-md-2">
 						<div class="client-item-img">
 							<a href="<?php the_sub_field('client-repeater-url') ?>">
-								<img src="<?php the_sub_field('client-repeater-image') ?>" alt="client" />
+
+								<?php $client_repeater_image = get_sub_field('client-repeater-image');
+								if (!empty($client_repeater_image)) : ?>
+									<img src="<?php echo $client_repeater_image['url'] ?>" alt="<?php echo $client_repeater_image['alt'] ?>" />
+								<?php endif; ?>
+
 							</a>
 						</div>
 					</div>

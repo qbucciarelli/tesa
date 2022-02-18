@@ -49,7 +49,12 @@ $image = get_field('image')
 							<div class="col-12 cap-text-block">
 								<h3><?php the_sub_field('tapon-item-title'); ?></h3>
 								<?php the_sub_field('tapon-item-body'); ?>
-								<img class="col-12 col-sm-8 offset-sm-2" src="<?php the_sub_field('tapon-item-image'); ?>" alt="<?php the_sub_field('tapon-item-title'); ?>" />
+
+								<?php $tapon_item_image = get_sub_field('tapon-item-image');
+								if (!empty($tapon_item_image)) : ?>
+									<img class="col-12 col-sm-8 offset-sm-2" src="<?php echo $tapon_item_image['url'] ?>" alt="<?php echo $tapon_item_image['alt'] ?>" />
+								<?php endif; ?>
+
 								<?php
 								$link = get_sub_field_object('tapon-item-button')['value'];
 								if ($link) :
@@ -77,7 +82,7 @@ $image = get_field('image')
 			<div class="container">
 				<div class="row">
 					<div data-aos="fade-up" class="col-12 cap-text-main-title">
-						<h2>Descubre el tapón TESA</h2>
+						<h2><?php the_field('tapon-title'); ?></h2>
 					</div>
 				</div>
 			</div>
@@ -164,7 +169,7 @@ $image = get_field('image')
 							<div class="ring-content-text">
 								<?php
 								if (get_row_index() == "3") {
-									echo '<img src="' . get_site_url() . '/wp-content/themes/tesa-theme/assets/images/beneficios_03.png" alt=""/>';
+									echo '<img src="' . get_site_url() . '/wp-content/themes/tesa-theme/assets/images/beneficios_03.png" alt="beneficios"/>';
 								} else {
 									echo '<div class="value" akhi=" ' . get_sub_field('beneficios-repeater-value') . '" >0</div>';
 								}

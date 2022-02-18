@@ -98,10 +98,6 @@
   .third_widget_area:last-child li + li {
     padding-top: 20px;
   }
-  .wpml-ls-item {
-    display: none;
-  }
-
   .container-fluid {
     padding: 20px 0;
     position: relative;
@@ -174,7 +170,7 @@
   }
 }
 
-#menu-footer-info {
+.footer_widget_area .menu {
   display: flex;
   justify-content: center;
   align-items: center;

@@ -35,6 +35,14 @@ header.header {
   }
 }
 
+// #menu-main-menu li:first-child {
+//   display: none;
+// }
+
+#navbar li.menu-item-home {
+  display: none;
+}
+
 .navbar {
   padding-top: 0;
   padding-bottom: 0;
@@ -137,8 +145,7 @@ header.header {
   }
 
   .wpml-ls-item {
-    display: none;
-    // display: flex;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     .nav-link {

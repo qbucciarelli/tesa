@@ -99,18 +99,15 @@
   }
 
   .section-form:before {
-    background-color: #f8f9fa;
-    content: "";
-    height: 50%;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    top: inherit;
-    width: 100%;
-    z-index: 1;
+    display: none;
   }
   .section-descargas {
     background-color: #f8f9fa;
     padding-bottom: 160px;
   }
+}
+
+.section-form {
+  margin-top: 80px;
+  padding-bottom: 80px !important;
 }

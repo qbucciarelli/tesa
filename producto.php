@@ -146,7 +146,7 @@ $image = get_field('image')
 						endif;
 						?>
 					</div>
-					<a class="btn btn-primary" href="<?php the_sub_field('pareja-repeater-link') ?>"><?php the_sub_field('pareja-repeater-button') ?></a>
+					<a target="_blank" class="btn btn-primary" href="<?php the_sub_field('pareja-repeater-button-link') ?>"><?php the_sub_field('pareja-repeater-button') ?></a>
 				</div>
 			</div>
 	<?php

@@ -106,20 +106,10 @@ endif;
 		</div>
 	</div>
 
-	<div style="display: flex; align-items: center; justify-content: center">
-		<!-- Inicio de fragmento de código de HubSpot -->
-		<button type="button" id="hs_show_banner_button" style="background-color: #425b76; border: 1px solid #425b76;
-         border-radius: 3px; padding: 10px 16px; text-decoration: none; color: #fff;
-         font-family: inherit; font-size: inherit; font-weight: normal; line-height: inherit;
-         text-align: left; text-shadow: none;" onClick="(function(){
-    var _hsp = window._hsp = window._hsp || [];
-    _hsp.push(['showBanner']);
-  })()">
-			<?php esc_html_e('Configuración de cookies', 'tesa-theme'); ?>
-		</button>
+	<!-- Start of HubSpot Embed Code -->
+	<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/20213022.js"></script>
+	<!-- End of HubSpot Embed Code -->
 
-		<!-- Fin de fragmento de código de HubSpot -->
-	</div>
 </footer><!-- /#footer -->
 </div><!-- /#wrapper -->
 <?php

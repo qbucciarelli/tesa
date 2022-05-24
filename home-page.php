@@ -11,6 +11,7 @@ get_header();
 <?php
 $image = get_field('image')
 ?>
+
 <div class="section section-jumbotron" style="background-image: url('<?php echo esc_url($image['url']); ?>')">
 	<div class="container-fluid">
 		<div class="row">
@@ -31,122 +32,202 @@ $image = get_field('image')
 	</div>
 </div>
 
-<div class="section section-animation" id="section-animation">
-	<div class="cap-mobile d-block d-lg-none">
-		<div class="container">
-			<div class="row">
-				<div class="col-12 cap-text-main-title">
-					<h2><?php the_field('tapon-title'); ?></h2>
-				</div>
-				<?php
-				// Check rows exists.
-				if (have_rows('tapon-repeater')) :
+<div class="section section-tapones" id="section-tapones">
+	<div class="container">
+		<div class="row accordion" id="accordionExample">
 
-					// Loop through rows.
-					while (have_rows('tapon-repeater')) : the_row();
-				?>
-						<div class="cap-text">
-							<div class="col-12 cap-text-block">
-								<h3><?php the_sub_field('tapon-item-title'); ?></h3>
-								<?php the_sub_field('tapon-item-body'); ?>
-
-								<?php $tapon_item_image = get_sub_field('tapon-item-image');
-								if (!empty($tapon_item_image)) : ?>
-									<img class="col-12 col-sm-8 offset-sm-2" src="<?php echo $tapon_item_image['url'] ?>" alt="<?php echo $tapon_item_image['alt'] ?>" />
-								<?php endif; ?>
-
-								<?php
-								$link = get_sub_field_object('tapon-item-button')['value'];
-								if ($link) :
-									$link_url = $link['url'];
-									$link_title = $link['title'];
-								?>
-									<a href="<?php echo esc_url($link_url); ?>" class="btn btn-primary"><?php echo esc_html($link_title); ?></a>
-								<?php endif; ?>
-							</div>
-						</div>
-				<?php
-					// End loop.
-					endwhile;
-
-				// No value.
-				else :
-				// Do something...
-				endif;
-				?>
+			<div class="col-12 cap-text-main-title">
+				<h2><?php the_field('tapon-title'); ?></h2>
 			</div>
-		</div>
-	</div>
-	<div class="cap-animation d-none d-lg-block">
-		<div class="cap-titles">
-			<div class="container">
-				<div class="row">
-					<div data-aos="fade-up" class="col-12 cap-text-main-title">
-						<h2><?php the_field('tapon-title'); ?></h2>
-					</div>
-				</div>
-			</div>
-		</div>
 
-		<div class="container">
-			<div class="row">
-				<div class="cap-text cap-text--1">
-
-					<?php
-					// Check rows exists.
-					if (have_rows('tapon-repeater')) :
-
-						// Loop through rows.
-						while (have_rows('tapon-repeater')) : the_row();
-					?>
-							<div class="col-5 cap-text-block cap-text-block--<?php echo get_row_index(); ?>">
-								<h3><?php the_sub_field('tapon-item-title'); ?></h3>
-								<?php the_sub_field('tapon-item-body'); ?>
-								<?php
-								$link = get_sub_field_object('tapon-item-button')['value'];
-								if ($link) :
-									$link_url = $link['url'];
-									$link_title = $link['title'];
-								?>
-									<a href="<?php echo esc_url($link_url); ?>" class="btn btn-primary"><?php echo esc_html($link_title); ?></a>
-								<?php endif; ?>
-							</div>
-					<?php
-						// End loop.
-						endwhile;
-
-					// No value.
-					else :
-					// Do something...
-					endif;
-					?>
-					<div class="caps d-none d-lg-flex">
-						<div class="col-6 offset-6 d-flex justify-content-center align-items-center">
-
-							<div class="cap cap-1" style="position: relative;">
-								<div class="cap-icon cap-icon-1"></div>
-								<div class="cap-icon cap-icon-2"></div>
-								<div class="cap-icon cap-icon-3"></div>
-								<div class="cap-icon cap-icon-4"></div>
-								<div class="cap-icon cap-icon-5"></div>
-								<div class="cap-icon cap-icon-6"></div>
-								<div class="cap-icon cap-icon-7"></div>
-								<div class="cap-icon cap-icon-8"></div>
-								<div class="cap-icon cap-icon-9"></div>
-								<div class="cap-icon cap-icon-10"></div>
-								<div class="cap cap-2"></div>
-								<div class="cap cap-3"></div>
+			<div class="col-4">
+				<div class="col-12 cap-text-block">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="heading1">
+							<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+								<img src="<?php echo get_site_url(); ?>/wp-content/themes/tesa-theme/assets/images/seguridad.png" />
+								<?php the_field('tapon-item-title-1'); ?>
+							</button>
+						</h2>
+						<div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<?php the_field('tapon-item-body-1'); ?>
 							</div>
 						</div>
 					</div>
-
+				</div>
+				<div class="col-12 cap-text-block">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="heading2">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+								<img src="<?php echo get_site_url(); ?>/wp-content/themes/tesa-theme/assets/images/granulado_alta_calidad.png" />
+								<?php the_field('tapon-item-title-2'); ?>
+							</button>
+						</h2>
+						<div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<?php the_field('tapon-item-body-2'); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 cap-text-block">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="heading3">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+								<img src="<?php echo get_site_url(); ?>/wp-content/themes/tesa-theme/assets/images/personalizacion.png" />
+								<?php the_field('tapon-item-title-3'); ?>
+							</button>
+						</h2>
+						<div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<?php the_field('tapon-item-body-3'); ?>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
+
+			<div class="col-4">
+				<div class="col-12 column-img">
+					<div class="cap-gif"></div>
+				</div>
+			</div>
+
+			<div class="col-4">
+				<div class="col-12 cap-text-block">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="heading4">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+								<img src="<?php echo get_site_url(); ?>/wp-content/themes/tesa-theme/assets/images/precision.png" />
+								<?php the_field('tapon-item-title-4'); ?>
+							</button>
+						</h2>
+						<div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<?php the_field('tapon-item-body-4'); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 cap-text-block">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="heading5">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+								<img src="<?php echo get_site_url(); ?>/wp-content/themes/tesa-theme/assets/images/dos_discos.png" />
+								<?php the_field('tapon-item-title-5'); ?>
+							</button>
+						</h2>
+						<div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<?php the_field('tapon-item-body-5'); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12 btn-tapon">
+				<a href="<?php echo the_field('tapon_button_url'); ?>" class="btn btn-primary"><?php echo the_field('tapon_button_title'); ?></a>
+			</div>
+
+		</div>
+
+		<div class="row accordion-mobile" id="accordionExample">
+
+			<div class="col-12 cap-text-main-title">
+				<h2><?php the_field('tapon-title'); ?></h2>
+			</div>
+
+			<div class="col-12">
+				<div class="col-12 column-img">
+					<div class="cap-gif"></div>
+				</div>
+
+				<div class="col-12 cap-text-block">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="heading1">
+							<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+								<img src="<?php echo get_site_url(); ?>/wp-content/themes/tesa-theme/assets/images/seguridad.png" />
+								<?php the_field('tapon-item-title-1'); ?>
+							</button>
+						</h2>
+						<div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<?php the_field('tapon-item-body-1'); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 cap-text-block">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="heading2">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+								<img src="<?php echo get_site_url(); ?>/wp-content/themes/tesa-theme/assets/images/granulado_alta_calidad.png" />
+								<?php the_field('tapon-item-title-2'); ?>
+							</button>
+						</h2>
+						<div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<?php the_field('tapon-item-body-2'); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 cap-text-block">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="heading3">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+								<img src="<?php echo get_site_url(); ?>/wp-content/themes/tesa-theme/assets/images/personalizacion.png" />
+								<?php the_field('tapon-item-title-3'); ?>
+							</button>
+						</h2>
+						<div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<?php the_field('tapon-item-body-3'); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 cap-text-block">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="heading4">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+								<img src="<?php echo get_site_url(); ?>/wp-content/themes/tesa-theme/assets/images/precision.png" />
+								<?php the_field('tapon-item-title-4'); ?>
+							</button>
+						</h2>
+						<div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<?php the_field('tapon-item-body-4'); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 cap-text-block">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="heading5">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+								<img src="<?php echo get_site_url(); ?>/wp-content/themes/tesa-theme/assets/images/dos_discos.png" />
+								<?php the_field('tapon-item-title-5'); ?>
+							</button>
+						</h2>
+						<div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<?php the_field('tapon-item-body-5'); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12 btn-tapon">
+				<a href="<?php echo the_field('tapon_button_url'); ?>" class="btn btn-primary"><?php echo the_field('tapon_button_title'); ?></a>
+			</div>
+
 		</div>
 	</div>
 </div>
-
-
 
 <div class="section section-ring">
 
@@ -169,17 +250,24 @@ $image = get_field('image')
 							<div class="ring-content-text">
 								<?php
 								if (get_row_index() == "3") {
-									echo '<img src="' . get_site_url() . '/wp-content/themes/tesa-theme/assets/images/beneficios_03.png" alt="beneficios"/>';
+									echo '<img src="' . get_site_url() . '/wp-content/themes/tesa-theme/assets/images/icono.png" alt="beneficios" class="icon-tca"/>';
+								} elseif (get_row_index() == "2") {
+									echo '<img src="' . get_site_url() . '/wp-content/themes/tesa-theme/assets/images/icon-tca.png" alt="beneficios" class="icon-tca"/>';
 								} else {
 									echo '<div class="value" akhi=" ' . get_sub_field('beneficios-repeater-value') . '" >0</div>';
 								}
 								?>
 								<span><?php the_sub_field('beneficios-repeater-symbol'); ?></span>
 							</div>
-							<svg class="progress-ring" width="144" height="144">
-								<circle class="progress-ring__circle circle<?php echo get_row_index(); ?>" stroke="white" stroke-width="4" fill="transparent" r="70" cx="72" cy="72" />
-								<circle class="progress-ring__circle" stroke="white" stroke-width="4" fill="transparent" r="70" cx="72" cy="72" style="opacity: 0.2" />
-							</svg>
+							<?php
+							if (get_row_index() == "1") {
+								echo '<svg class="progress-ring" width="144" height="144">
+											<circle class="progress-ring__circle circle' . get_row_index() . '" stroke="white" stroke-width="4" fill="transparent" r="70" cx="72" cy="72" />
+											<circle class="progress-ring__circle" stroke="white" stroke-width="4" fill="transparent" r="70" cx="72" cy="72" style="opacity: 0.2" />
+										</svg>';
+							}
+							?>
+
 						</div>
 						<div class="ring-text text-center"><?php the_sub_field('beneficios-repeater-text'); ?></div>
 					</div>

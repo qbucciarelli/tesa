@@ -80,6 +80,8 @@
 
   input.hs-button {
     @extend .btn-secondary;
+    width: 100%;
+    max-width: initial;
   }
 
   .hs_submit {
@@ -117,6 +119,12 @@ fieldset > div .input {
   margin-right: 0 !important;
 }
 
+.hs-form-715fb711-9b29-4a86-aad0-0b8c15d44706_85c458c6-f4d7-4981-aa75-52ceea9084fc
+  fieldset.form-columns-2
+  .hs-form-field {
+  width: 100%;
+}
+
 .form-container {
   background-color: #172332;
   padding-top: 100px;
@@ -128,10 +136,9 @@ fieldset > div .input {
     padding-bottom: 60px;
   }
 
-  label:not(.hs-form-booleancheckbox-display) {
-    display: none;
+  .hs_tipo_de_contacto {
+    width: 100% !important;
   }
-
   label span {
     display: inline-flex;
     flex-direction: row;

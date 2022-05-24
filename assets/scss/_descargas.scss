@@ -7,7 +7,7 @@
   }
   .jumbotron-title {
     margin-top: auto;
-    margin-bottom: auto;
+    margin-bottom: 20px;
   }
 
   .guias {
@@ -31,6 +31,7 @@
   }
 
   .guia-main-title {
+    padding-top: 20px;
     padding-bottom: 20px;
   }
 
@@ -47,6 +48,14 @@
 
   .guia-picture img {
     width: 100%;
+  }
+
+  .guia-main-title {
+    font-family: "henderson-sans-basic";
+    font-size: 21px;
+    line-height: 1.1;
+    font-weight: bold;
+    color: #242424;
   }
 
   .guia-title h3 {
@@ -112,6 +121,12 @@
     }
   }
   #footer {
+    margin-top: 0;
+  }
+  .section-guia {
+    padding-bottom: 40px;
+  }
+  .section-form {
     margin-top: 0;
   }
 }

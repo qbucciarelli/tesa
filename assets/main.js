@@ -1,6 +1,6 @@
 // Webpack Imports
 import * as bootstrap from "bootstrap";
-import { animationCaps } from "./js/_animationsCaps";
+// import { animationCaps } from "./js/_animationsCaps";
 import { animationsRings } from "./js/_animationsRings";
 import { animationProduct } from "./js/_animationProduct";
 
@@ -74,10 +74,10 @@ import { animationProduct } from "./js/_animationProduct";
   //Functions calls
 
   if (document.querySelector("body").classList.contains("home")) {
-    animationCaps();
+    // animationCaps();
     animationsRings();
     window.onscroll = function () {
-      animationCaps();
+      // animationCaps();
       animationsRings();
     };
   }
@@ -85,6 +85,6 @@ import { animationProduct } from "./js/_animationProduct";
   if (
     document.querySelector("body").classList.contains("page-template-producto ")
   ) {
-    animationCaps();
+    // animationCaps();
   }
 })();
